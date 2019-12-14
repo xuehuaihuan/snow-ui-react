@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { StyledBase } from '../base'
+import styled from 'styled-components';
+import { StyledBase } from '../base';
 
 export const StyledLineBounce = styled(StyledBase)`
   position: relative;
@@ -55,4 +55,4 @@ export const StyledLineBounce = styled(StyledBase)`
       transform: scaleY(1);
     }
   }
-`
+`;

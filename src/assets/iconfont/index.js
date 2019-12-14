@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalIconfontStyle = createGlobalStyle`
   @font-face {
@@ -41,4 +41,4 @@ export const GlobalIconfontStyle = createGlobalStyle`
   .iconfont-quill-pen-fill::before {
     content: "\\e673";
   }
-`
+`;

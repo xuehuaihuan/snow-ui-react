@@ -1,17 +1,17 @@
-import React from 'react'
+import React from 'react';
 import {
   StyledList,
-  StyledItem
-} from './styles'
+  StyledItem,
+} from './styles';
 
 const Item = (props) => {
-  return React.createElement(StyledItem, props)
-}
+  return React.createElement(StyledItem, props);
+};
 
 const ExampleList = (props) => {
-  return React.createElement(StyledList, props)
-}
+  return React.createElement(StyledList, props);
+};
 
-ExampleList.Item = Item
+ExampleList.Item = Item;
 
-export default ExampleList
+export default ExampleList;

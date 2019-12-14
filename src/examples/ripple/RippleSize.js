@@ -1,14 +1,14 @@
-import React from 'react'
-import { Ripple } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
+import React from 'react';
+import { Ripple } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
 import {
-  majorColor, minorColor, plainColor, successColor, infoColor, dangerColor, warningColor
-} from '../../lib/common/theme'
+  majorColor, minorColor, plainColor, successColor, infoColor, dangerColor, warningColor,
+} from '../../lib/common/theme';
 import {
-  XXS, XS, SM, MD, LG, XL, XXL
-} from '../../lib/common/constant'
-import { StyledRippleSize } from './styles/RippleSize'
+  XXS, XS, SM, MD, LG, XL, XXL,
+} from '../../lib/common/constant';
+import { StyledRippleSize } from './styles/RippleSize';
 
 const RippleSize = () => {
   return (
@@ -29,7 +29,7 @@ const RippleSize = () => {
                 <div className='gradient-image line-paper' />
               </Ripple>
               <figcaption style={{
-                color: majorColor
+                color: majorColor,
               }}
               >
                 {XXS}
@@ -45,7 +45,7 @@ const RippleSize = () => {
                 <div className='gradient-image line-paper' />
               </Ripple>
               <figcaption style={{
-                color: minorColor
+                color: minorColor,
               }}
               >
                 {XS}
@@ -62,7 +62,7 @@ const RippleSize = () => {
               </Ripple>
               <figcaption style={{
                 backgroundColor: '#000',
-                color: plainColor
+                color: plainColor,
               }}
               >
                 {SM}
@@ -78,7 +78,7 @@ const RippleSize = () => {
                 <div className='gradient-image line-paper' />
               </Ripple>
               <figcaption style={{
-                color: successColor
+                color: successColor,
               }}
               >
                 {MD}
@@ -94,7 +94,7 @@ const RippleSize = () => {
                 <div className='gradient-image line-paper' />
               </Ripple>
               <figcaption style={{
-                color: infoColor
+                color: infoColor,
               }}
               >
                 {LG}
@@ -110,7 +110,7 @@ const RippleSize = () => {
                 <div className='gradient-image line-paper' />
               </Ripple>
               <figcaption style={{
-                color: dangerColor
+                color: dangerColor,
               }}
               >
                 {XL}
@@ -126,7 +126,7 @@ const RippleSize = () => {
                 <div className='gradient-image line-paper' />
               </Ripple>
               <figcaption style={{
-                color: warningColor
+                color: warningColor,
               }}
               >
                 {XXL}
@@ -136,7 +136,7 @@ const RippleSize = () => {
         </ExampleList>
       </StyledRippleSize>
     </>
-  )
-}
+  );
+};
 
-export default RippleSize
+export default RippleSize;

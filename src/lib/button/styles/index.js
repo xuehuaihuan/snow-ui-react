@@ -1,16 +1,16 @@
-import styled from 'styled-components'
-import { getTransition } from './transition'
-import { getSkin } from './skin'
-import { getBorder, getHalfpxBorder, hasAbsolutePositionBorder } from './border'
-import { getBlock, getInline } from './block'
-import { getShape } from './shape'
-import { getSize } from './size'
-import { hasIcon, getForHasIcon } from './icon'
-import { BUTTON_BORDER_CONTENT_CLASS } from '../constant'
-import { STRING_EMPTY, RIPPLE } from '../../common/constant'
+import styled from 'styled-components';
+import { getTransition } from './transition';
+import { getSkin } from './skin';
+import { getBorder, getHalfpxBorder, hasAbsolutePositionBorder } from './border';
+import { getBlock, getInline } from './block';
+import { getShape } from './shape';
+import { getSize } from './size';
+import { hasIcon, getForHasIcon } from './icon';
+import { BUTTON_BORDER_CONTENT_CLASS } from '../constant';
+import { STRING_EMPTY, RIPPLE } from '../../common/constant';
 
 export const StyledButton = styled.button.attrs(props => ({
-  type: props.type ? props.type : 'button'
+  type: props.type ? props.type : 'button',
 }))`
   appearance: none;
   margin: 0;
@@ -69,4 +69,4 @@ export const StyledButton = styled.button.attrs(props => ({
       z-index: 1
     }` : STRING_EMPTY
   }
-`
+`;

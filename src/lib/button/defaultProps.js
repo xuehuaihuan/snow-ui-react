@@ -3,8 +3,8 @@ import {
   RECT,
   SM,
   DISABLED_OPACITY_VALUE, DISABLED_GRAY,
-  CONTENT_BOX
-} from '../common/constant'
+  CONTENT_BOX,
+} from '../common/constant';
 
 export const defaultProps = {
   /**
@@ -211,7 +211,7 @@ export const defaultProps = {
    *   delay: '0ms'
    * }
    */
-  transition: true
-}
+  transition: true,
+};
 
-export default defaultProps
+export default defaultProps;

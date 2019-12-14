@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledRippleCenterMode = styled.section`
   .gradient-image {
@@ -68,4 +68,4 @@ export const StyledRippleCenterMode = styled.section`
     background-color: #282828;
     background-size: 16px 16px;
   }
-`
+`;

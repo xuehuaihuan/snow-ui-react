@@ -1,14 +1,14 @@
-import React from 'react'
-import { Button } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
-import { StyledButtonIcon } from './styles/ButtonIcon'
+import React from 'react';
+import { Button } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
+import { StyledButtonIcon } from './styles/ButtonIcon';
 import {
   MAJOR, MINOR, PLAIN, SUCCESS, INFO, DANGER, WARNING, CUSTOM,
   ROUNDED_RECT, CAPSULE, SQUARE, ROUNDED_SQUARE, CIRCLE, DIAMOND,
   LG,
-  DASHED
-} from '../../lib/common/constant'
+  DASHED,
+} from '../../lib/common/constant';
 
 const ButtonIcon = () => {
   return (
@@ -24,7 +24,7 @@ const ButtonIcon = () => {
               size={LG}
               icon={{
                 src: require('../../assets/svg/icons/icon-cloud-download.svg'),
-                fill: true
+                fill: true,
               }}
             >
               require svg image
@@ -36,7 +36,7 @@ const ButtonIcon = () => {
               size={LG}
               shape={ROUNDED_RECT}
               icon={{
-                src: require('../../assets/img/icons/icon-cloud-upload.png')
+                src: require('../../assets/img/icons/icon-cloud-upload.png'),
               }}
             >
               png image not support changing skin
@@ -49,7 +49,7 @@ const ButtonIcon = () => {
               shape={CAPSULE}
               icon={{
                 src: require('../../assets/svg/icons/icon-download.svg'),
-                fill: true
+                fill: true,
               }}
               hasBorder
               inverse
@@ -64,7 +64,7 @@ const ButtonIcon = () => {
               shape={SQUARE}
               icon={{
                 src: require('../../assets/svg/icons/icon-upload.svg'),
-                fill: true
+                fill: true,
               }}
             />
           </ExampleList.Item>
@@ -75,7 +75,7 @@ const ButtonIcon = () => {
               shape={ROUNDED_SQUARE}
               icon={{
                 src: require('../../assets/svg/icons/icon-arrow-left-thin.svg'),
-                fill: true
+                fill: true,
               }}
             />
           </ExampleList.Item>
@@ -86,11 +86,11 @@ const ButtonIcon = () => {
               shape={CIRCLE}
               icon={{
                 src: require('../../assets/svg/icons/icon-arrow-right-thin.svg'),
-                fill: true
+                fill: true,
               }}
               hasBorder
               border={{
-                style: DASHED
+                style: DASHED,
               }}
             />
           </ExampleList.Item>
@@ -101,7 +101,7 @@ const ButtonIcon = () => {
               shape={DIAMOND}
               icon={{
                 src: require('../../assets/svg/icons/icon-search.svg'),
-                stroke: true
+                stroke: true,
               }}
             >
               position: left
@@ -115,13 +115,13 @@ const ButtonIcon = () => {
               icon={{
                 src: require('../../assets/svg/icons/icon-arrow-right.svg'),
                 fill: true,
-                position: 'right'
+                position: 'right',
               }}
               fgcolor='#fff'
               bgcolor='#ff4200'
               active={{
                 fgcolor: '#fff',
-                bgcolor: '#ff0036'
+                bgcolor: '#ff0036',
               }}
             >
               position: right
@@ -144,7 +144,7 @@ const ButtonIcon = () => {
         </div>
       </StyledButtonIcon>
     </>
-  )
-}
+  );
+};
 
-export default ButtonIcon
+export default ButtonIcon;

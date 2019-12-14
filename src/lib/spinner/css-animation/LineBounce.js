@@ -1,5 +1,5 @@
-import React from 'react'
-import { StyledLineBounce } from '../styles'
+import React from 'react';
+import { StyledLineBounce } from '../styles';
 
 const LineBounce = (props) => {
   return React.createElement(StyledLineBounce, props, [
@@ -7,8 +7,8 @@ const LineBounce = (props) => {
     React.createElement('span', { key: '2' }),
     React.createElement('span', { key: '3' }),
     React.createElement('span', { key: '4' }),
-    React.createElement('span', { key: '5' })
-  ])
-}
+    React.createElement('span', { key: '5' }),
+  ]);
+};
 
-export default LineBounce
+export default LineBounce;

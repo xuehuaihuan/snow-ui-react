@@ -3,10 +3,10 @@ import {
   TOP, TOP_LEFT, TOP_RIGHT, RIGHT, BOTTOM, BOTTOM_LEFT, BOTTOM_RIGHT, LEFT,
   UNDEFINED,
   NUMBER_ZERO, STRING_EMPTY,
-  BORDER_BOX, PADDING_BOX
-} from '../../common/constant'
-import { hasOwnBorder } from './border'
-import { BUTTON_DIAMOND_CONTENT_CLASS, RIPPLE_CLASS, RIPPLE_LIST_CLASS } from '../constant'
+  BORDER_BOX, PADDING_BOX,
+} from '../../common/constant';
+import { hasOwnBorder } from './border';
+import { BUTTON_DIAMOND_CONTENT_CLASS, RIPPLE_CLASS, RIPPLE_LIST_CLASS } from '../constant';
 
 /**
  * get shape - 获取形状样式
@@ -17,149 +17,149 @@ import { BUTTON_DIAMOND_CONTENT_CLASS, RIPPLE_CLASS, RIPPLE_LIST_CLASS } from '.
  * @param  { String }   borderRadiusPosition
  * @return { String }   as follows: - 如下：
  */
-const shapes = [RECT, ROUNDED_RECT, CAPSULE, SQUARE, ROUNDED_SQUARE, CIRCLE, DIAMOND]
-const DEFAULT_ROUNDED = 0.36
-const DEFAULT_CAPSULE = 3
-const DEFAULT_CIRCLE = 9600000
-const DEFAULT_DIAMOND = 36
-const UNIT = 'em'
-const RATIO = 2
+const shapes = [RECT, ROUNDED_RECT, CAPSULE, SQUARE, ROUNDED_SQUARE, CIRCLE, DIAMOND];
+const DEFAULT_ROUNDED = 0.36;
+const DEFAULT_CAPSULE = 3;
+const DEFAULT_CIRCLE = 9600000;
+const DEFAULT_DIAMOND = 36;
+const UNIT = 'em';
+const RATIO = 2;
 export const getShape = (shape, hasHalfpxBorder, hasBorder, boxSizing, borderRadiusPosition) => {
-  let bgclip
-  let borderRadiusTop
-  let borderRadiusTopLeft
-  let borderRadiusTopRight
-  let borderRadiusRight
-  let borderRadiusBottom
-  let borderRadiusBottomLeft
-  let borderRadiusBottomRight
-  let borderRadiusLeft
+  let bgclip;
+  let borderRadiusTop;
+  let borderRadiusTopLeft;
+  let borderRadiusTopRight;
+  let borderRadiusRight;
+  let borderRadiusBottom;
+  let borderRadiusBottomLeft;
+  let borderRadiusBottomRight;
+  let borderRadiusLeft;
   // borderRadiusAll = NUMBER_ZERO
   // overwrite user agent default value - 覆盖用户代理默认值
-  let borderRadiusAll
-  let diamondRule = STRING_EMPTY
+  let borderRadiusAll;
+  let diamondRule = STRING_EMPTY;
 
-  shape = shapes.includes(shape) ? shape : RECT
+  shape = shapes.includes(shape) ? shape : RECT;
 
   switch (shape) {
     case ROUNDED_RECT:
     case ROUNDED_SQUARE:
-      bgclip = hasOwnBorder(hasBorder, boxSizing) ? PADDING_BOX : BORDER_BOX
+      bgclip = hasOwnBorder(hasBorder, boxSizing) ? PADDING_BOX : BORDER_BOX;
 
       switch (borderRadiusPosition) {
         case TOP:
-          borderRadiusTop = DEFAULT_ROUNDED
-          break
+          borderRadiusTop = DEFAULT_ROUNDED;
+          break;
         case TOP_LEFT:
-          borderRadiusAll = NUMBER_ZERO
-          borderRadiusTopLeft = DEFAULT_ROUNDED
-          break
+          borderRadiusAll = NUMBER_ZERO;
+          borderRadiusTopLeft = DEFAULT_ROUNDED;
+          break;
         case TOP_RIGHT:
-          borderRadiusAll = NUMBER_ZERO
-          borderRadiusTopRight = DEFAULT_ROUNDED
-          break
+          borderRadiusAll = NUMBER_ZERO;
+          borderRadiusTopRight = DEFAULT_ROUNDED;
+          break;
         case RIGHT:
-          borderRadiusRight = DEFAULT_ROUNDED
-          break
+          borderRadiusRight = DEFAULT_ROUNDED;
+          break;
         case BOTTOM:
-          borderRadiusBottom = DEFAULT_ROUNDED
-          break
+          borderRadiusBottom = DEFAULT_ROUNDED;
+          break;
         case BOTTOM_LEFT:
-          borderRadiusAll = NUMBER_ZERO
-          borderRadiusBottomLeft = DEFAULT_ROUNDED
-          break
+          borderRadiusAll = NUMBER_ZERO;
+          borderRadiusBottomLeft = DEFAULT_ROUNDED;
+          break;
         case BOTTOM_RIGHT:
-          borderRadiusAll = NUMBER_ZERO
-          borderRadiusBottomRight = DEFAULT_ROUNDED
-          break
+          borderRadiusAll = NUMBER_ZERO;
+          borderRadiusBottomRight = DEFAULT_ROUNDED;
+          break;
         case LEFT:
-          borderRadiusLeft = DEFAULT_ROUNDED
-          break
+          borderRadiusLeft = DEFAULT_ROUNDED;
+          break;
         default:
-          borderRadiusAll = DEFAULT_ROUNDED
-          break
+          borderRadiusAll = DEFAULT_ROUNDED;
+          break;
       }
 
-      break
+      break;
     case CAPSULE:
-      bgclip = hasOwnBorder(hasBorder, boxSizing) ? PADDING_BOX : BORDER_BOX
+      bgclip = hasOwnBorder(hasBorder, boxSizing) ? PADDING_BOX : BORDER_BOX;
 
       switch (borderRadiusPosition) {
         case TOP:
-          borderRadiusTop = DEFAULT_CAPSULE
-          break
+          borderRadiusTop = DEFAULT_CAPSULE;
+          break;
         case TOP_LEFT:
-          borderRadiusAll = NUMBER_ZERO
-          borderRadiusTopLeft = DEFAULT_CAPSULE
-          break
+          borderRadiusAll = NUMBER_ZERO;
+          borderRadiusTopLeft = DEFAULT_CAPSULE;
+          break;
         case TOP_RIGHT:
-          borderRadiusAll = NUMBER_ZERO
-          borderRadiusTopRight = DEFAULT_CAPSULE
-          break
+          borderRadiusAll = NUMBER_ZERO;
+          borderRadiusTopRight = DEFAULT_CAPSULE;
+          break;
         case RIGHT:
-          borderRadiusRight = DEFAULT_CAPSULE
-          break
+          borderRadiusRight = DEFAULT_CAPSULE;
+          break;
         case BOTTOM:
-          borderRadiusBottom = DEFAULT_CAPSULE
-          break
+          borderRadiusBottom = DEFAULT_CAPSULE;
+          break;
         case BOTTOM_LEFT:
-          borderRadiusAll = NUMBER_ZERO
-          borderRadiusBottomLeft = DEFAULT_CAPSULE
-          break
+          borderRadiusAll = NUMBER_ZERO;
+          borderRadiusBottomLeft = DEFAULT_CAPSULE;
+          break;
         case BOTTOM_RIGHT:
-          borderRadiusAll = NUMBER_ZERO
-          borderRadiusBottomRight = DEFAULT_CAPSULE
-          break
+          borderRadiusAll = NUMBER_ZERO;
+          borderRadiusBottomRight = DEFAULT_CAPSULE;
+          break;
         case LEFT:
-          borderRadiusLeft = DEFAULT_CAPSULE
-          break
+          borderRadiusLeft = DEFAULT_CAPSULE;
+          break;
         default:
-          borderRadiusAll = DEFAULT_CAPSULE
-          break
+          borderRadiusAll = DEFAULT_CAPSULE;
+          break;
       }
 
-      break
+      break;
     case CIRCLE:
-      bgclip = hasOwnBorder(hasBorder, boxSizing) ? PADDING_BOX : BORDER_BOX
+      bgclip = hasOwnBorder(hasBorder, boxSizing) ? PADDING_BOX : BORDER_BOX;
 
       switch (borderRadiusPosition) {
         case TOP:
-          borderRadiusTop = DEFAULT_CIRCLE
-          break
+          borderRadiusTop = DEFAULT_CIRCLE;
+          break;
         case TOP_LEFT:
-          borderRadiusAll = NUMBER_ZERO
-          borderRadiusTopLeft = DEFAULT_CIRCLE
-          break
+          borderRadiusAll = NUMBER_ZERO;
+          borderRadiusTopLeft = DEFAULT_CIRCLE;
+          break;
         case TOP_RIGHT:
-          borderRadiusAll = NUMBER_ZERO
-          borderRadiusTopRight = DEFAULT_CIRCLE
-          break
+          borderRadiusAll = NUMBER_ZERO;
+          borderRadiusTopRight = DEFAULT_CIRCLE;
+          break;
         case RIGHT:
-          borderRadiusRight = DEFAULT_CIRCLE
-          break
+          borderRadiusRight = DEFAULT_CIRCLE;
+          break;
         case BOTTOM:
-          borderRadiusBottom = DEFAULT_CIRCLE
-          break
+          borderRadiusBottom = DEFAULT_CIRCLE;
+          break;
         case BOTTOM_LEFT:
-          borderRadiusAll = NUMBER_ZERO
-          borderRadiusBottomLeft = DEFAULT_CIRCLE
-          break
+          borderRadiusAll = NUMBER_ZERO;
+          borderRadiusBottomLeft = DEFAULT_CIRCLE;
+          break;
         case BOTTOM_RIGHT:
-          borderRadiusAll = NUMBER_ZERO
-          borderRadiusBottomRight = DEFAULT_CIRCLE
-          break
+          borderRadiusAll = NUMBER_ZERO;
+          borderRadiusBottomRight = DEFAULT_CIRCLE;
+          break;
         case LEFT:
-          borderRadiusLeft = DEFAULT_CIRCLE
-          break
+          borderRadiusLeft = DEFAULT_CIRCLE;
+          break;
         default:
-          borderRadiusAll = DEFAULT_CIRCLE
-          break
+          borderRadiusAll = DEFAULT_CIRCLE;
+          break;
       }
 
-      break
+      break;
     case DIAMOND:
-      bgclip = BORDER_BOX
-      borderRadiusAll = NUMBER_ZERO
+      bgclip = BORDER_BOX;
+      borderRadiusAll = NUMBER_ZERO;
       diamondRule = `
         transform: skew(-${DEFAULT_DIAMOND}deg, 0);
         .${BUTTON_DIAMOND_CONTENT_CLASS} {
@@ -175,16 +175,16 @@ export const getShape = (shape, hasHalfpxBorder, hasBorder, boxSizing, borderRad
             overflow: visible;
           }
         }
-      `
+      `;
 
-      break
+      break;
     case SQUARE:
     case RECT:
     default:
-      bgclip = BORDER_BOX
-      borderRadiusAll = NUMBER_ZERO
+      bgclip = BORDER_BOX;
+      borderRadiusAll = NUMBER_ZERO;
 
-      break
+      break;
   }
 
   const borderRadiusRule = `
@@ -197,7 +197,7 @@ export const getShape = (shape, hasHalfpxBorder, hasBorder, boxSizing, borderRad
     ${borderRadiusBottomLeft ? `border-bottom-left-radius: ${borderRadiusBottomLeft}${UNIT};` : STRING_EMPTY}
     ${borderRadiusBottomRight ? `border-bottom-right-radius: ${borderRadiusBottomRight}${UNIT};` : STRING_EMPTY}
     ${borderRadiusLeft ? `border-radius: ${borderRadiusLeft}${UNIT} 0 0 ${borderRadiusLeft}${UNIT};` : STRING_EMPTY}
-  `
+  `;
 
   const halfpxBorderRadiusRule = `
     ${borderRadiusAll === UNDEFINED ? STRING_EMPTY : `border-radius: ${borderRadiusAll * RATIO}${UNIT};`}
@@ -209,7 +209,7 @@ export const getShape = (shape, hasHalfpxBorder, hasBorder, boxSizing, borderRad
     ${borderRadiusBottomLeft ? `border-bottom-left-radius: ${borderRadiusBottomLeft * RATIO}${UNIT};` : STRING_EMPTY}
     ${borderRadiusBottomRight ? `border-bottom-right-radius: ${borderRadiusBottomRight * RATIO}${UNIT};` : STRING_EMPTY}
     ${borderRadiusLeft ? `border-radius: ${borderRadiusLeft * RATIO}${UNIT} 0 0 ${borderRadiusLeft * RATIO}${UNIT};` : STRING_EMPTY}
-  `
+  `;
 
   return `
     ${bgclip ? `background-clip: ${bgclip}` : STRING_EMPTY}
@@ -232,5 +232,5 @@ export const getShape = (shape, hasHalfpxBorder, hasBorder, boxSizing, borderRad
         ${borderRadiusRule}
       }
     }
-  `
-}
+  `;
+};

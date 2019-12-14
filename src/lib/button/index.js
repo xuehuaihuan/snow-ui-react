@@ -1,33 +1,33 @@
-import React, { useContext } from 'react'
-import { ThemeContext } from 'styled-components'
-import { StyledButton } from './styles'
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
+import { StyledButton } from './styles';
 import {
   DIAMOND,
   STRING_EMPTY,
-  RIPPLE
-} from '../common/constant'
-import defaultProps from './defaultProps'
-import propTypes from './propTypes'
-import { getLoading } from './styles/loading'
-import { getIcon, hasIcon } from './styles/icon'
-import { hasAbsolutePositionBorder } from './styles/border'
-import { BUTTON_BORDER_CONTENT_CLASS, BUTTON_DIAMOND_CONTENT_CLASS } from './constant'
-import { Ripple } from '../ripple'
+  RIPPLE,
+} from '../common/constant';
+import defaultProps from './defaultProps';
+import propTypes from './propTypes';
+import { getLoading } from './styles/loading';
+import { getIcon, hasIcon } from './styles/icon';
+import { hasAbsolutePositionBorder } from './styles/border';
+import { BUTTON_BORDER_CONTENT_CLASS, BUTTON_DIAMOND_CONTENT_CLASS } from './constant';
+import { Ripple } from '../ripple';
 
 const handleClick = (onClick, disabled, ifDisabledPreventClick, loading, event) => {
   // Loading does not allow click - 加载中不允许点击
   if (loading) {
-    return
+    return;
   }
 
   // disabled, and ifDisabledPreventClick is true, does not allow click
   // 禁用，并且ifDisabledPreventClick为true，不允许点击
   if (disabled && ifDisabledPreventClick) {
-    return
+    return;
   }
 
-  onClick && onClick(event)
-}
+  onClick && onClick(event);
+};
 
 /**
  * Button - 按钮组件
@@ -36,8 +36,8 @@ const handleClick = (onClick, disabled, ifDisabledPreventClick, loading, event) 
  */
 
 export const Button = ({ onClick, disabled, loading, shape, children, ...props }) => {
-  const themeContext = useContext(ThemeContext)
-  let ButtonContent
+  const themeContext = useContext(ThemeContext);
+  let ButtonContent;
 
   if (shape === DIAMOND) {
     if (loading || hasIcon(props.icon)) {
@@ -51,7 +51,7 @@ export const Button = ({ onClick, disabled, loading, shape, children, ...props }
         >
           {loading ? getLoading(loading, props.size, children) : getIcon(props.icon, themeContext, children)}
         </span>
-      )
+      );
     } else {
       ButtonContent = (
         <span className={
@@ -63,7 +63,7 @@ export const Button = ({ onClick, disabled, loading, shape, children, ...props }
         >
           {children}
         </span>
-      )
+      );
     }
   } else {
     if (loading || hasIcon(props.icon)) {
@@ -72,13 +72,13 @@ export const Button = ({ onClick, disabled, loading, shape, children, ...props }
           <span className={BUTTON_BORDER_CONTENT_CLASS}>
             {loading ? getLoading(loading, props.size, children) : getIcon(props.icon, themeContext, children)}
           </span>
-        )
+        );
       } else {
         ButtonContent = (
           <>
             {loading ? getLoading(loading, props.size, children) : getIcon(props.icon, themeContext, children)}
           </>
-        )
+        );
       }
     } else {
       if (hasAbsolutePositionBorder(props.hasHalfpxBorder, props.hasBorder, props.boxSizing)) {
@@ -86,13 +86,13 @@ export const Button = ({ onClick, disabled, loading, shape, children, ...props }
           <span className={BUTTON_BORDER_CONTENT_CLASS}>
             {children}
           </span>
-        )
+        );
       } else {
         ButtonContent = (
           <>
             {children}
           </>
-        )
+        );
       }
     }
   }
@@ -116,11 +116,11 @@ export const Button = ({ onClick, disabled, loading, shape, children, ...props }
         ) : ButtonContent
       }
     </StyledButton>
-  )
-}
+  );
+};
 
-Button.defaultProps = defaultProps
+Button.defaultProps = defaultProps;
 
-Button.propTypes = propTypes
+Button.propTypes = propTypes;
 
-export default Button
+export default Button;

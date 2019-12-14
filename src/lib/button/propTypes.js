@@ -1,20 +1,20 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 export const propTypes = {
   active: PropTypes.oneOfType([
     PropTypes.shape({
       borderColor: PropTypes.string,
       bgcolor: PropTypes.string,
-      color: PropTypes.string
+      color: PropTypes.string,
     }),
-    PropTypes.bool
+    PropTypes.bool,
   ]),
   bgcolor: PropTypes.string,
   block: PropTypes.bool,
   border: PropTypes.shape({
     width: PropTypes.string,
     style: PropTypes.string,
-    color: PropTypes.string
+    color: PropTypes.string,
   }),
   borderRadiusPosition: PropTypes.string,
   boxSizing: PropTypes.string,
@@ -28,9 +28,9 @@ export const propTypes = {
       endColor: PropTypes.string,
       type: PropTypes.string,
       linearDirection: PropTypes.string,
-      radialDirection: PropTypes.string
+      radialDirection: PropTypes.string,
     }),
-    PropTypes.bool
+    PropTypes.bool,
   ]),
   activeGradient: PropTypes.oneOfType([
     PropTypes.shape({
@@ -38,9 +38,9 @@ export const propTypes = {
       endColor: PropTypes.string,
       type: PropTypes.string,
       linearDirection: PropTypes.string,
-      radialDirection: PropTypes.string
+      radialDirection: PropTypes.string,
     }),
-    PropTypes.bool
+    PropTypes.bool,
   ]),
   hasBorder: PropTypes.bool,
   hasHalfpxBorder: PropTypes.bool,
@@ -49,7 +49,7 @@ export const propTypes = {
     fill: PropTypes.bool,
     stroke: PropTypes.bool,
     stopColor: PropTypes.bool,
-    position: PropTypes.string
+    position: PropTypes.string,
   }),
   ifDisabledPreventClick: PropTypes.bool,
   inverse: PropTypes.bool,
@@ -60,15 +60,15 @@ export const propTypes = {
         src: PropTypes.string,
         fill: PropTypes.bool,
         stroke: PropTypes.bool,
-        stopColor: PropTypes.bool
-      })
+        stopColor: PropTypes.bool,
+      }),
     }),
-    PropTypes.bool
+    PropTypes.bool,
   ]),
   ripple: PropTypes.shape({
     centerMode: PropTypes.bool,
     fgcolor: PropTypes.string,
-    size: PropTypes.string
+    size: PropTypes.string,
   }),
   shape: PropTypes.string,
   size: PropTypes.string,
@@ -78,10 +78,10 @@ export const propTypes = {
       property: PropTypes.string,
       duration: PropTypes.string,
       timingFunction: PropTypes.string,
-      delay: PropTypes.string
+      delay: PropTypes.string,
     }),
-    PropTypes.bool
-  ])
-}
+    PropTypes.bool,
+  ]),
+};
 
-export default propTypes
+export default propTypes;

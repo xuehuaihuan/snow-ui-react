@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledRippleFgcolor = styled.section`
   .gradient-image {
@@ -42,4 +42,4 @@ export const StyledRippleFgcolor = styled.section`
       linear-gradient(90deg, #b71 2%, #fb1 0, #fb1 98%, #b71 0%) 0 0 #fb1;
     background-size: 40px 60px;
   }
-`
+`;

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledButtonGradient = styled.section`
   /* by Paul Salentiny */
@@ -52,4 +52,4 @@ export const StyledButtonGradient = styled.section`
       linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.19) 50%);
     background-size: 13px, 29px, 37px, 53px;
   } */
-`
+`;

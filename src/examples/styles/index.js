@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const StyledExamples = styled.div`
   background-color: ${props => props.theme.generalColor9};
@@ -15,6 +15,6 @@ const StyledExamples = styled.div`
       margin-top: 20px;
     }
   }
-`
+`;
 
-export default StyledExamples
+export default StyledExamples;

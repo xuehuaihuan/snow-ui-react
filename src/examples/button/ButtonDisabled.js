@@ -1,13 +1,13 @@
-import React from 'react'
-import { Button } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
+import React from 'react';
+import { Button } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
 import {
   MAJOR, MINOR, PLAIN, SUCCESS, INFO, DANGER, WARNING, CUSTOM,
   DISABLED_OPACITY,
-  RIPPLE
-} from '../../lib/common/constant'
-import { StyledButtonDisabled } from './styles/ButtonDisabled'
+  RIPPLE,
+} from '../../lib/common/constant';
+import { StyledButtonDisabled } from './styles/ButtonDisabled';
 
 const ButtonDisabled = () => {
   return (
@@ -23,7 +23,7 @@ const ButtonDisabled = () => {
             <Button
               skin={MAJOR}
               disabled
-              onClick={(event) => { window.alert('disabled, prevent click') }}
+              onClick={(event) => { window.alert('disabled, prevent click'); }}
             >
               disabled, prevent click
             </Button>
@@ -33,7 +33,7 @@ const ButtonDisabled = () => {
               skin={MINOR}
               disabled
               ifDisabledPreventClick={false}
-              onClick={(event) => { window.alert('disabled, also can click. it\'s useful for alerting users') }}
+              onClick={(event) => { window.alert('disabled, also can click. it\'s useful for alerting users'); }}
             >
               disabled, also can click. it's useful for alerting users
             </Button>
@@ -81,7 +81,7 @@ const ButtonDisabled = () => {
               icon={{
                 src: require('../../assets/svg/icons/icon-arrow-right.svg'),
                 fill: true,
-                position: 'right'
+                position: 'right',
               }}
             >
               icon
@@ -111,7 +111,7 @@ const ButtonDisabled = () => {
               skin={MAJOR}
               disabled
               disabledType={DISABLED_OPACITY}
-              onClick={(event) => { window.alert('disabled, prevent click') }}
+              onClick={(event) => { window.alert('disabled, prevent click'); }}
             >
               disabled, prevent click
             </Button>
@@ -122,7 +122,7 @@ const ButtonDisabled = () => {
               disabled
               disabledType={DISABLED_OPACITY}
               ifDisabledPreventClick={false}
-              onClick={(event) => { window.alert('disabled, also can click. it\'s useful for alerting users') }}
+              onClick={(event) => { window.alert('disabled, also can click. it\'s useful for alerting users'); }}
             >
               disabled, also can click. it's useful for alerting users
             </Button>
@@ -175,7 +175,7 @@ const ButtonDisabled = () => {
               icon={{
                 src: require('../../assets/svg/icons/icon-arrow-right.svg'),
                 fill: true,
-                position: 'right'
+                position: 'right',
               }}
             >
               icon
@@ -237,7 +237,7 @@ const ButtonDisabled = () => {
         </ExampleList>
       </StyledButtonDisabled>
     </>
-  )
-}
+  );
+};
 
-export default ButtonDisabled
+export default ButtonDisabled;

@@ -1,10 +1,10 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 // is inline ? - 是否为行内
 // default: false; 默认：否
 const isBlock = (props) => {
-  return Object.prototype.hasOwnProperty.call(props, 'inline') ? props.inline : false
-}
+  return Object.prototype.hasOwnProperty.call(props, 'inline') ? props.inline : false;
+};
 
 const getInlineStyle = (props) => {
   const rule = `
@@ -14,10 +14,10 @@ const getInlineStyle = (props) => {
       display: inline-block;
       padding: ${props.theme.scpx(10)};
     }
-  `
+  `;
 
-  return rule
-}
+  return rule;
+};
 
 const getDefaultStyle = (props) => {
   const rule = `
@@ -26,18 +26,18 @@ const getDefaultStyle = (props) => {
         margin-top: ${props.theme.scpx(10)};
       }
     }
-  `
+  `;
 
-  return rule
-}
+  return rule;
+};
 
 export const StyledList = styled.ul`
   padding: ${props => props.theme.scpx(10)} ${props => props.theme.scpx(20)};
   ${props => isBlock(props) ? getInlineStyle(props) : getDefaultStyle(props)}
-`
+`;
 
 export const StyledItem = styled.li`
   /* ${props => isBlock(props) ? getInlineStyle(props) : getDefaultStyle(props)} */
-`
+`;
 
-export default StyledList
+export default StyledList;

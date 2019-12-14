@@ -1,5 +1,5 @@
-import React from 'react'
-import { StyledCircleFade } from '../styles'
+import React from 'react';
+import { StyledCircleFade } from '../styles';
 
 const CircleFade = (props) => {
   return React.createElement(StyledCircleFade, props, [
@@ -10,8 +10,8 @@ const CircleFade = (props) => {
     React.createElement('span', { key: '5' }),
     React.createElement('span', { key: '6' }),
     React.createElement('span', { key: '7' }),
-    React.createElement('span', { key: '8' })
-  ])
-}
+    React.createElement('span', { key: '8' }),
+  ]);
+};
 
-export default CircleFade
+export default CircleFade;

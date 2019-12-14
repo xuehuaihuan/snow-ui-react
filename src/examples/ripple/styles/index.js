@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledRippleExamples = styled.div`
   figcaption {
@@ -6,4 +6,4 @@ export const StyledRippleExamples = styled.div`
     text-align: center;
   }
 
-`
+`;

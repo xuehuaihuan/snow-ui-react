@@ -1,9 +1,9 @@
-import { MD } from '../common/constant'
+import { MD } from '../common/constant';
 
 export const defaultProps = {
   centerMode: false,
   fgcolor: '',
-  size: MD
-}
+  size: MD,
+};
 
-export default defaultProps
+export default defaultProps;

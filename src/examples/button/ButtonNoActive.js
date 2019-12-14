@@ -1,14 +1,14 @@
-import React from 'react'
-import { Button } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
+import React from 'react';
+import { Button } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
 import {
   MAJOR, MINOR, PLAIN, SUCCESS, INFO, DANGER, WARNING,
   ROUNDED_RECT, CAPSULE, SQUARE, ROUNDED_SQUARE, CIRCLE, DIAMOND,
   XL,
-  DASHED, DOTTED
-} from '../../lib/common/constant'
-import { StyledButtonNoActive } from './styles/ButtonNoActive'
+  DASHED, DOTTED,
+} from '../../lib/common/constant';
+import { StyledButtonNoActive } from './styles/ButtonNoActive';
 
 const ButtonNoActive = () => {
   return (
@@ -36,7 +36,7 @@ const ButtonNoActive = () => {
               block
               hasBorder
               border={{
-                style: DASHED
+                style: DASHED,
               }}
               active={false}
             >
@@ -75,7 +75,7 @@ const ButtonNoActive = () => {
               block
               hasHalfpxBorder
               border={{
-                style: DOTTED
+                style: DOTTED,
               }}
               active={false}
             >
@@ -90,7 +90,7 @@ const ButtonNoActive = () => {
               block
               hasBorder
               border={{
-                style: DASHED
+                style: DASHED,
               }}
               active={false}
             >
@@ -113,7 +113,7 @@ const ButtonNoActive = () => {
         </ExampleList>
       </StyledButtonNoActive>
     </>
-  )
-}
+  );
+};
 
-export default ButtonNoActive
+export default ButtonNoActive;

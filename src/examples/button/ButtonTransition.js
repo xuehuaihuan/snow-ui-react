@@ -1,12 +1,12 @@
-import React from 'react'
-import { Button } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
-import { StyledButtonTransition } from './styles/ButtonTransition'
+import React from 'react';
+import { Button } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
+import { StyledButtonTransition } from './styles/ButtonTransition';
 import {
   MAJOR, MINOR,
-  XXL
-} from '../../lib/common/constant'
+  XXL,
+} from '../../lib/common/constant';
 
 const ButtonTransition = () => {
   return (
@@ -39,7 +39,7 @@ const ButtonTransition = () => {
                 property: 'color,background-color',
                 duration: '1s,1s',
                 timingFunction: 'ease-in-out',
-                delay: '30ms'
+                delay: '30ms',
               }}
             >
               custom transition
@@ -48,7 +48,7 @@ const ButtonTransition = () => {
         </ExampleList>
       </StyledButtonTransition>
     </>
-  )
-}
+  );
+};
 
-export default ButtonTransition
+export default ButtonTransition;

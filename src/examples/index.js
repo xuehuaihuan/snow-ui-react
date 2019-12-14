@@ -1,5 +1,5 @@
-import React from 'react'
-import StyledExamples from './styles'
+import React from 'react';
+import StyledExamples from './styles';
 // import ButtonExamples from './button'
 // import SpinnerExamples from './spinner'
 // import RippleExamples from './ripple'
@@ -11,7 +11,7 @@ const Examples = () => {
       {/* <SpinnerExamples /> */}
       {/* <RippleExamples /> */}
     </StyledExamples>
-  )
-}
+  );
+};
 
-export default Examples
+export default Examples;

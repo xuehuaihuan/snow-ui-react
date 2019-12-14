@@ -1,5 +1,5 @@
-import React from 'react'
-import { StyledCircleScaleFade } from '../styles'
+import React from 'react';
+import { StyledCircleScaleFade } from '../styles';
 
 const CircleScaleFade = (props) => {
   return React.createElement(StyledCircleScaleFade, props, [
@@ -10,8 +10,8 @@ const CircleScaleFade = (props) => {
     React.createElement('span', { key: '5' }),
     React.createElement('span', { key: '6' }),
     React.createElement('span', { key: '7' }),
-    React.createElement('span', { key: '8' })
-  ])
-}
+    React.createElement('span', { key: '8' }),
+  ]);
+};
 
-export default CircleScaleFade
+export default CircleScaleFade;

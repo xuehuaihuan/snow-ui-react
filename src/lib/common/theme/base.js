@@ -1,44 +1,44 @@
-import { lighten, darken } from 'polished'
+import { lighten, darken } from 'polished';
 
 // only used to control major color
-export const baseMajorColor = '#ea6f5a'
+export const baseMajorColor = '#ea6f5a';
 
 // only used to control minor color
-export const baseMinorColor = '#42c02e'
+export const baseMinorColor = '#42c02e';
 
 // only used to control plain color
-export const basePlainColor = '#f7f7f7'
+export const basePlainColor = '#f7f7f7';
 
 // only used to control success color
-export const baseSuccessColor = '#07c160'
+export const baseSuccessColor = '#07c160';
 
 // only used to control info color
-export const baseInfoColor = '#2196f3'
+export const baseInfoColor = '#2196f3';
 
 // only used to control danger color
-export const baseDangerColor = '#c00'
+export const baseDangerColor = '#c00';
 
 // only used to control warning color
-export const baseWarningColor = '#fa5151'
+export const baseWarningColor = '#fa5151';
 
 // only used to control disabled color
-export const baseDisabledColor = '#ccc'
+export const baseDisabledColor = '#ccc';
 
 // light mode - 亮色模式
-const LIGHT_MODE = 'light'
+const LIGHT_MODE = 'light';
 // dark mode - 暗色模式
-const DARK_MODE = 'dark'
+const DARK_MODE = 'dark';
 // default mode: normal - 默认模式：normal
-export const MODE = 'normal'
+export const MODE = 'normal';
 export const getModeColor = (mode, color) => {
   switch (mode) {
     case LIGHT_MODE:
-      return lighten(0.1, color)
+      return lighten(0.1, color);
     case DARK_MODE:
-      return darken(0.1, color)
+      return darken(0.1, color);
     default:
-      return color
+      return color;
   }
-}
+};
 // styled-components length unit - 长度单位
-export const scpx = (number) => `${number}px`
+export const scpx = (number) => `${number}px`;

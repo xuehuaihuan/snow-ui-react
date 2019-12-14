@@ -1,14 +1,14 @@
-import React from 'react'
-import { Button } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
+import React from 'react';
+import { Button } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
 import {
   MAJOR, MINOR, PLAIN, SUCCESS, INFO, DANGER, WARNING, CUSTOM,
   XXL,
   GRADIENT_LINEAR, GRADIENT_RADIAL,
-  TO_TOP, TO_BOTTOM, TO_LEFT_TOP, TO_RIGHT_BOTTOM, TO_RIGHT_TOP, TO_LEFT_BOTTOM, TO_IN, TO_OUT
-} from '../../lib/common/constant'
-import { StyledButtonGradient } from './styles/ButtonGradient'
+  TO_TOP, TO_BOTTOM, TO_LEFT_TOP, TO_RIGHT_BOTTOM, TO_RIGHT_TOP, TO_LEFT_BOTTOM, TO_IN, TO_OUT,
+} from '../../lib/common/constant';
+import { StyledButtonGradient } from './styles/ButtonGradient';
 
 const ButtonGradient = () => {
   return (
@@ -33,10 +33,10 @@ const ButtonGradient = () => {
               skin={MINOR}
               size={XXL}
               gradient={{
-                type: GRADIENT_RADIAL
+                type: GRADIENT_RADIAL,
               }}
               activeGradient={{
-                type: GRADIENT_RADIAL
+                type: GRADIENT_RADIAL,
               }}
             >
               {GRADIENT_RADIAL} gradient
@@ -47,10 +47,10 @@ const ButtonGradient = () => {
               skin={PLAIN}
               size={XXL}
               gradient={{
-                linearDirection: TO_TOP
+                linearDirection: TO_TOP,
               }}
               activeGradient={{
-                linearDirection: TO_BOTTOM
+                linearDirection: TO_BOTTOM,
               }}
             >
               {TO_TOP}, active: {TO_BOTTOM}
@@ -61,10 +61,10 @@ const ButtonGradient = () => {
               skin={SUCCESS}
               size={XXL}
               gradient={{
-                linearDirection: TO_LEFT_TOP
+                linearDirection: TO_LEFT_TOP,
               }}
               activeGradient={{
-                linearDirection: TO_RIGHT_BOTTOM
+                linearDirection: TO_RIGHT_BOTTOM,
               }}
             >
               {TO_LEFT_TOP}, active: {TO_RIGHT_BOTTOM}
@@ -75,10 +75,10 @@ const ButtonGradient = () => {
               skin={INFO}
               size={XXL}
               gradient={{
-                linearDirection: TO_RIGHT_TOP
+                linearDirection: TO_RIGHT_TOP,
               }}
               activeGradient={{
-                linearDirection: TO_LEFT_BOTTOM
+                linearDirection: TO_LEFT_BOTTOM,
               }}
             >
               {TO_RIGHT_TOP}, active: {TO_LEFT_BOTTOM}
@@ -89,10 +89,10 @@ const ButtonGradient = () => {
               skin={DANGER}
               size={XXL}
               gradient={{
-                linearDirection: '45deg'
+                linearDirection: '45deg',
               }}
               activeGradient={{
-                linearDirection: '225deg'
+                linearDirection: '225deg',
               }}
             >
               45deg, active: 225deg
@@ -104,11 +104,11 @@ const ButtonGradient = () => {
               size={XXL}
               gradient={{
                 type: GRADIENT_RADIAL,
-                linearDirection: '45deg'
+                linearDirection: '45deg',
               }}
               activeGradient={{
                 type: GRADIENT_RADIAL,
-                linearDirection: '225deg'
+                linearDirection: '225deg',
               }}
             >
               {GRADIENT_RADIAL}, gradient.linearDirection and activeGradient.linearDirection not work
@@ -120,17 +120,17 @@ const ButtonGradient = () => {
               size={XXL}
               fgcolor='#fff'
               active={{
-                fgcolor: '#fff'
+                fgcolor: '#fff',
               }}
               gradient={{
                 type: GRADIENT_RADIAL,
                 startColor: '#ff8140',
-                endColor: '#e91930'
+                endColor: '#e91930',
               }}
               activeGradient={{
                 type: GRADIENT_RADIAL,
                 startColor: '#0084ff',
-                endColor: '#43d480'
+                endColor: '#43d480',
               }}
             >
               customize startColor, endColor, {TO_OUT}, active: {TO_IN}
@@ -142,19 +142,19 @@ const ButtonGradient = () => {
               size={XXL}
               fgcolor='#fff'
               active={{
-                fgcolor: '#fff'
+                fgcolor: '#fff',
               }}
               gradient={{
                 type: GRADIENT_RADIAL,
                 startColor: '#ff8140',
                 endColor: '#e91930',
-                radialDirection: TO_IN
+                radialDirection: TO_IN,
               }}
               activeGradient={{
                 type: GRADIENT_RADIAL,
                 startColor: '#0084ff',
                 endColor: '#43d480',
-                radialDirection: TO_OUT
+                radialDirection: TO_OUT,
               }}
             >
               customize startColor, endColor, {TO_IN}, active: {TO_OUT}
@@ -167,7 +167,7 @@ const ButtonGradient = () => {
               className='pyramid'
               fgcolor='#fff'
               style={{
-                textShadow: '-1px -1px 0 #43d480, 1px -1px #43d480, -1px 1px 0 #43d480, 1px 1px 0 #43d480'
+                textShadow: '-1px -1px 0 #43d480, 1px -1px #43d480, -1px 1px 0 #43d480, 1px 1px 0 #43d480',
               }}
             >
               active style not work
@@ -182,7 +182,7 @@ const ButtonGradient = () => {
               bgcolor='#ff8140'
               active={{
                 fgcolor: '#ff8140',
-                bgcolor: '#e91930'
+                bgcolor: '#e91930',
               }}
               disabled
             >
@@ -221,7 +221,7 @@ const ButtonGradient = () => {
         </div>
       </StyledButtonGradient>
     </>
-  )
-}
+  );
+};
 
-export default ButtonGradient
+export default ButtonGradient;

@@ -1,11 +1,11 @@
-import React from 'react'
-import { Spinner } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
-import { StyledSpinnerImage } from './styles/SpinnerImage'
+import React from 'react';
+import { Spinner } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
+import { StyledSpinnerImage } from './styles/SpinnerImage';
 import {
-  majorColor, minorColor, plainColor, successColor, infoColor, dangerColor, warningColor
-} from '../../lib/common/theme'
+  majorColor, minorColor, plainColor, successColor, infoColor, dangerColor, warningColor,
+} from '../../lib/common/theme';
 
 const SpinnerImage = () => {
   return (
@@ -31,7 +31,7 @@ const SpinnerImage = () => {
               effect='image'
               image={{
                 src: 'audio',
-                fill: true
+                fill: true,
               }}
             />
             <p className='subtitle color-minor'>audio - 音频</p>
@@ -42,7 +42,7 @@ const SpinnerImage = () => {
               effect='image'
               image={{
                 src: 'ball-triangle',
-                stroke: true
+                stroke: true,
               }}
             />
             <p className='subtitle color-plain'>球三角 - ball triangle</p>
@@ -53,7 +53,7 @@ const SpinnerImage = () => {
               effect='image'
               image={{
                 src: 'circle-grid',
-                fill: true
+                fill: true,
               }}
             />
             <p className='subtitle color-success'>circle grid - 圆格子</p>
@@ -64,7 +64,7 @@ const SpinnerImage = () => {
               effect='image'
               image={{
                 src: 'circles',
-                fill: true
+                fill: true,
               }}
             />
             <p className='subtitle color-info'>circles - 多个圆</p>
@@ -75,7 +75,7 @@ const SpinnerImage = () => {
               effect='image'
               image={{
                 src: 'line-bounce',
-                fill: true
+                fill: true,
               }}
             />
             <p className='subtitle color-danger'>line bounce - 直线弹跳</p>
@@ -86,7 +86,7 @@ const SpinnerImage = () => {
               effect='image'
               image={{
                 src: 'ring-ripple',
-                stroke: true
+                stroke: true,
               }}
             />
             <p className='subtitle color-warning'>ring ripple - 波纹环</p>
@@ -97,7 +97,7 @@ const SpinnerImage = () => {
               effect='image'
               image={{
                 src: 'ring-smoke',
-                stroke: true
+                stroke: true,
               }}
             />
             <p className='subtitle color-major'>ring smoke - 烟圈</p>
@@ -108,7 +108,7 @@ const SpinnerImage = () => {
               effect='image'
               image={{
                 src: 'ring',
-                stroke: true
+                stroke: true,
               }}
             />
             <p className='subtitle color-minor'>ring - 环</p>
@@ -120,7 +120,7 @@ const SpinnerImage = () => {
               image={{
                 src: 'multiple-circles-fade',
                 stroke: true,
-                fill: true
+                fill: true,
               }}
             />
             <p className='subtitle color-success'>multiple circles fade - 多圆淡化</p>
@@ -161,7 +161,7 @@ const SpinnerImage = () => {
               image={{
                 src: require('../../assets/svg/loading/ball-bounce.svg'),
                 builtin: false,
-                fill: true
+                fill: true,
               }}
             />
             <p className='subtitle color-major'>ball bounce - 球跳动</p>
@@ -173,7 +173,7 @@ const SpinnerImage = () => {
               image={{
                 src: require('../../assets/svg/loading/comet-tail-spin.svg'),
                 builtin: false,
-                fill: true
+                fill: true,
               }}
             />
             <p className='subtitle color-minor'>comet tail spin - 彗尾旋转</p>
@@ -185,7 +185,7 @@ const SpinnerImage = () => {
               image={{
                 src: require('../../assets/svg/loading/crescent-ring-spin.svg'),
                 builtin: false,
-                fill: true
+                fill: true,
               }}
             />
             <p className='subtitle color-plain'>crescent ring spin - 月牙环旋转</p>
@@ -197,7 +197,7 @@ const SpinnerImage = () => {
               image={{
                 src: require('../../assets/svg/loading/dual-ring-spin.svg'),
                 builtin: false,
-                stroke: true
+                stroke: true,
               }}
             />
             <p className='subtitle color-success'>dual ring - 双环旋转</p>
@@ -209,7 +209,7 @@ const SpinnerImage = () => {
               image={{
                 src: require('../../assets/svg/loading/messenge-typing.svg'),
                 builtin: false,
-                fill: true
+                fill: true,
               }}
             />
             <p className='subtitle color-info'>messenge typing - 消息键入</p>
@@ -221,7 +221,7 @@ const SpinnerImage = () => {
               image={{
                 src: require('../../assets/svg/loading/multiple-balls-spin.svg'),
                 builtin: false,
-                fill: true
+                fill: true,
               }}
             />
             <p className='subtitle color-danger'>multiple balls spin - 多球旋转</p>
@@ -233,7 +233,7 @@ const SpinnerImage = () => {
               image={{
                 src: require('../../assets/svg/loading/music-note-bounce.svg'),
                 builtin: false,
-                fill: true
+                fill: true,
               }}
             />
             <p className='subtitle color-warning'>music note bounce - 音符弹跳</p>
@@ -246,7 +246,7 @@ const SpinnerImage = () => {
                 src: require('../../assets/svg/loading/text-entering.svg'),
                 builtin: false,
                 stroke: true,
-                fill: true
+                fill: true,
               }}
             />
             <p className='subtitle color-minor'>text entering - 文本输入</p>
@@ -258,7 +258,7 @@ const SpinnerImage = () => {
               image={{
                 src: require('../../assets/svg/loading/wave-ball-bounce.svg'),
                 builtin: false,
-                fill: true
+                fill: true,
               }}
             />
             <p className='subtitle color-info'>wave ball bounce - 波浪球弹跳</p>
@@ -272,7 +272,7 @@ const SpinnerImage = () => {
                 builtin: false,
                 stroke: true,
                 fill: true,
-                stopColor: true
+                stopColor: true,
               }}
             />
             <p className='subtitle color-danger'>leaves spin - 叶子旋转</p>
@@ -314,7 +314,7 @@ const SpinnerImage = () => {
               image={{
                 src: require('../../assets/img/loading/circle-fade.gif'),
                 builtin: false,
-                fill: true
+                fill: true,
               }}
             />
             <p className='subtitle color-major'>circle fade - 圆淡化</p>
@@ -326,7 +326,7 @@ const SpinnerImage = () => {
               image={{
                 src: require('../../assets/img/loading/circle-line-fade.gif'),
                 builtin: false,
-                fill: true
+                fill: true,
               }}
             />
             <p className='subtitle color-minor'>circle line fade - 圆直线淡化</p>
@@ -353,7 +353,7 @@ const SpinnerImage = () => {
         </div>
       </StyledSpinnerImage>
     </>
-  )
-}
+  );
+};
 
-export default SpinnerImage
+export default SpinnerImage;

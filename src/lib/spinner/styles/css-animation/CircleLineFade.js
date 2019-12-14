@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { StyledBase } from '../base'
+import styled from 'styled-components';
+import { StyledBase } from '../base';
 
 export const StyledCircleLineFade = styled(StyledBase)`
   position: relative;
@@ -81,4 +81,4 @@ export const StyledCircleLineFade = styled(StyledBase)`
       opacity: 0.7;
     }
   }
-`
+`;

@@ -1,11 +1,11 @@
-import styled from 'styled-components'
-import { StyledBase } from '../base'
+import styled from 'styled-components';
+import { StyledBase } from '../base';
 
 export const StyledLineSquareBounce = styled(StyledBase)`
   position: relative;
   width: 1em;
   height: 0.5em;
-`
+`;
 
 export const StyledLineSquareBounceInner = styled.span`
   position: absolute;
@@ -52,4 +52,4 @@ export const StyledLineSquareBounceInner = styled.span`
       transform: scale(0.2);
     }
   }
-`
+`;

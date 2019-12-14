@@ -1,14 +1,14 @@
-import React from 'react'
-import { Spinner } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
+import React from 'react';
+import { Spinner } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
 import {
-  MAJOR, MINOR, PLAIN, SUCCESS, INFO, DANGER, WARNING
-} from '../../lib/common/constant'
-import { StyledSpinnerFgcolor } from './styles/SpinnerFgcolor'
+  MAJOR, MINOR, PLAIN, SUCCESS, INFO, DANGER, WARNING,
+} from '../../lib/common/constant';
+import { StyledSpinnerFgcolor } from './styles/SpinnerFgcolor';
 import {
-  majorColor, minorColor, plainColor, successColor, infoColor, dangerColor, warningColor
-} from '../../lib/common/theme'
+  majorColor, minorColor, plainColor, successColor, infoColor, dangerColor, warningColor,
+} from '../../lib/common/theme';
 
 const SpinnerFgcolor = () => {
   return (
@@ -70,7 +70,7 @@ const SpinnerFgcolor = () => {
             />
             <p
               className='subtitle' style={{
-                color: '#026873'
+                color: '#026873',
               }}
             >any color you want
             </p>
@@ -78,7 +78,7 @@ const SpinnerFgcolor = () => {
         </ExampleList>
       </StyledSpinnerFgcolor>
     </>
-  )
-}
+  );
+};
 
-export default SpinnerFgcolor
+export default SpinnerFgcolor;

@@ -1,15 +1,15 @@
-import React from 'react'
-import { Button } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
-import { StyledButtonLoading } from './styles/ButtonLoading'
+import React from 'react';
+import { Button } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
+import { StyledButtonLoading } from './styles/ButtonLoading';
 import {
   MAJOR, MINOR, PLAIN, SUCCESS, INFO, DANGER, WARNING,
   ROUNDED_RECT, CAPSULE, DIAMOND, SQUARE, ROUNDED_SQUARE, CIRCLE,
   LG,
   DASHED,
-  DISABLED_OPACITY
-} from '../../lib/common/constant'
+  DISABLED_OPACITY,
+} from '../../lib/common/constant';
 
 const ButtonLoading = () => {
   return (
@@ -24,7 +24,7 @@ const ButtonLoading = () => {
               skin={MAJOR}
               size={LG}
               loading
-              onClick={() => { window.alert('loading, prevent click') }}
+              onClick={() => { window.alert('loading, prevent click'); }}
             >
               loading, prevent click
             </Button>
@@ -35,7 +35,7 @@ const ButtonLoading = () => {
               size={LG}
               shape={ROUNDED_RECT}
               loading={{
-                effect: 'circle-scale-fade'
+                effect: 'circle-scale-fade',
               }}
               hasBorder
             >
@@ -48,11 +48,11 @@ const ButtonLoading = () => {
               size={LG}
               shape={CAPSULE}
               loading={{
-                effect: 'circle-line-fade'
+                effect: 'circle-line-fade',
               }}
               hasHalfpxBorder
               border={{
-                style: DASHED
+                style: DASHED,
               }}
             >
               hasHalfpxBorder
@@ -64,7 +64,7 @@ const ButtonLoading = () => {
               shape={SQUARE}
               size={LG}
               loading={{
-                effect: 'line-bounce'
+                effect: 'line-bounce',
               }}
             />
           </ExampleList.Item>
@@ -79,8 +79,8 @@ const ButtonLoading = () => {
                 image: {
                   src: require('../../assets/svg/loading/wave-ball-bounce.svg'),
                   builtin: false,
-                  fill: true
-                }
+                  fill: true,
+                },
               }}
             />
           </ExampleList.Item>
@@ -91,15 +91,15 @@ const ButtonLoading = () => {
               shape={CIRCLE}
               hasBorder
               border={{
-                style: DASHED
+                style: DASHED,
               }}
               loading={{
                 effect: 'image',
                 image: {
                   src: require('../../assets/svg/loading/messenge-typing.svg'),
                   builtin: false,
-                  fill: true
-                }
+                  fill: true,
+                },
               }}
             />
           </ExampleList.Item>
@@ -113,8 +113,8 @@ const ButtonLoading = () => {
                 image: {
                   src: require('../../assets/svg/loading/multiple-balls-spin.svg'),
                   builtin: false,
-                  fill: true
-                }
+                  fill: true,
+                },
               }}
             >
               require svg image
@@ -142,7 +142,7 @@ const ButtonLoading = () => {
               size={LG}
               loading
               disabledType={DISABLED_OPACITY}
-              onClick={() => { window.alert('loading, prevent click') }}
+              onClick={() => { window.alert('loading, prevent click'); }}
             >
               loading, prevent click
             </Button>
@@ -153,7 +153,7 @@ const ButtonLoading = () => {
               size={LG}
               shape={ROUNDED_RECT}
               loading={{
-                effect: 'circle-scale-fade'
+                effect: 'circle-scale-fade',
               }}
               disabledType={DISABLED_OPACITY}
               hasBorder
@@ -167,12 +167,12 @@ const ButtonLoading = () => {
               size={LG}
               shape={CAPSULE}
               loading={{
-                effect: 'circle-line-fade'
+                effect: 'circle-line-fade',
               }}
               disabledType={DISABLED_OPACITY}
               hasHalfpxBorder
               border={{
-                style: DASHED
+                style: DASHED,
               }}
             >
               hasHalfpxBorder
@@ -184,7 +184,7 @@ const ButtonLoading = () => {
               shape={SQUARE}
               size={LG}
               loading={{
-                effect: 'line-bounce'
+                effect: 'line-bounce',
               }}
               disabledType={DISABLED_OPACITY}
             />
@@ -200,8 +200,8 @@ const ButtonLoading = () => {
                 image: {
                   src: require('../../assets/svg/loading/wave-ball-bounce.svg'),
                   builtin: false,
-                  fill: true
-                }
+                  fill: true,
+                },
               }}
               disabledType={DISABLED_OPACITY}
             />
@@ -213,15 +213,15 @@ const ButtonLoading = () => {
               shape={CIRCLE}
               hasBorder
               border={{
-                style: DASHED
+                style: DASHED,
               }}
               loading={{
                 effect: 'image',
                 image: {
                   src: require('../../assets/svg/loading/messenge-typing.svg'),
                   builtin: false,
-                  fill: true
-                }
+                  fill: true,
+                },
               }}
               disabledType={DISABLED_OPACITY}
             />
@@ -236,8 +236,8 @@ const ButtonLoading = () => {
                 image: {
                   src: require('../../assets/svg/loading/multiple-balls-spin.svg'),
                   builtin: false,
-                  fill: true
-                }
+                  fill: true,
+                },
               }}
               disabledType={DISABLED_OPACITY}
             >
@@ -247,7 +247,7 @@ const ButtonLoading = () => {
         </ExampleList>
       </StyledButtonLoading>
     </>
-  )
-}
+  );
+};
 
-export default ButtonLoading
+export default ButtonLoading;

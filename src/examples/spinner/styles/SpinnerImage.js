@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledSpinnerImage = styled.div`
   .spinner-list {
@@ -6,4 +6,4 @@ export const StyledSpinnerImage = styled.div`
       padding: ${props => props.theme.scpx(5)} ${props => props.theme.scpx(15)};
     }
   }
-`
+`;

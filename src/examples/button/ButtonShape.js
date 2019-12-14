@@ -1,14 +1,14 @@
-import React from 'react'
-import { Button } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
+import React from 'react';
+import { Button } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
 import {
   MAJOR, MINOR, PLAIN, SUCCESS, INFO, DANGER, WARNING, CUSTOM,
   RECT, ROUNDED_RECT, CAPSULE, SQUARE, ROUNDED_SQUARE, CIRCLE, DIAMOND,
   LG,
-  TOP, TOP_LEFT, TOP_RIGHT, RIGHT, BOTTOM, BOTTOM_LEFT, BOTTOM_RIGHT, LEFT
-} from '../../lib/common/constant'
-import { StyledButtonShape } from './styles/ButtonShape'
+  TOP, TOP_LEFT, TOP_RIGHT, RIGHT, BOTTOM, BOTTOM_LEFT, BOTTOM_RIGHT, LEFT,
+} from '../../lib/common/constant';
+import { StyledButtonShape } from './styles/ButtonShape';
 
 const ButtonShape = () => {
   return (
@@ -443,7 +443,7 @@ const ButtonShape = () => {
         </div>
       </StyledButtonShape>
     </>
-  )
-}
+  );
+};
 
-export default ButtonShape
+export default ButtonShape;

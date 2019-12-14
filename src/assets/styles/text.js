@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalTextStyle = createGlobalStyle`
   /* 文本对齐方式 */
@@ -94,4 +94,4 @@ export const GlobalTextStyle = createGlobalStyle`
     color: ${props => props.theme.warningColor};
     font-size: ${props => props.theme.scpx(12)};
   }
-`
+`;

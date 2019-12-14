@@ -1,4 +1,4 @@
-import { SNAKE_SPIN } from './constant'
+import { SNAKE_SPIN } from './constant';
 
 export const defaultProps = {
   /**
@@ -28,7 +28,7 @@ export const defaultProps = {
    * }
    */
   image: {
-    stopColor: true
+    stopColor: true,
   },
   /**
    * effect - 效果
@@ -39,7 +39,7 @@ export const defaultProps = {
    * size - 尺寸
    * @property { Boolean } size xxs | xs | sm | md | lg | xl | xxl
    */
-  size: ''
-}
+  size: '',
+};
 
-export default defaultProps
+export default defaultProps;

@@ -1,12 +1,12 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 import {
   RIPPLE_CLASS,
   RIPPLE_LIST_CLASS, RIPPLE_ITEM_CLASS,
-  RIPPLE_EFFECT, RIPPLE_EFFECT_CLASS
-} from '../constant'
+  RIPPLE_EFFECT, RIPPLE_EFFECT_CLASS,
+} from '../constant';
 
 export const StyledRipple = styled.div.attrs(() => ({
-  className: RIPPLE_CLASS
+  className: RIPPLE_CLASS,
 }))`
   display: inline-block;
   position: relative;
@@ -21,10 +21,10 @@ export const StyledRipple = styled.div.attrs(() => ({
     pointer-events: none;
     ${props => props.fgcolor ? `color: ${props.fgcolor};` : ''}
   }
-`
+`;
 
 export const StyledRippleItem = styled.div.attrs(() => ({
-  className: RIPPLE_ITEM_CLASS
+  className: RIPPLE_ITEM_CLASS,
 }))`
   position: absolute;
   left: 0;
@@ -45,4 +45,4 @@ export const StyledRippleItem = styled.div.attrs(() => ({
       opacity: 0;
     }
   }
-`
+`;

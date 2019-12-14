@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 export const propTypes = {
   centerMode: PropTypes.bool,
   fgcolor: PropTypes.string,
-  size: PropTypes.string
-}
+  size: PropTypes.string,
+};
 
-export default propTypes
+export default propTypes;

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledSpinnerExamples = styled.div`
   .spinner-list {
@@ -12,4 +12,4 @@ export const StyledSpinnerExamples = styled.div`
       }
     }
   }
-`
+`;

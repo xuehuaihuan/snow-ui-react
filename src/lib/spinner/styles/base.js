@@ -1,11 +1,11 @@
-import styled from 'styled-components'
-import { getSize } from './size'
+import styled from 'styled-components';
+import { getSize } from './size';
 
 export const StyledBase = styled.span`
   display: inline-block;
   ${props => `font-size: ${getSize(props.size, props.theme.scpx)};`}
   line-height: 1;
-`
+`;
 
 export const StyledSpinner = styled(StyledBase)`
   position: relative;
@@ -31,4 +31,4 @@ export const StyledSpinner = styled(StyledBase)`
     0% { transform: rotate(0); }
     to { transform: rotate(1turn); }
   }
-`
+`;

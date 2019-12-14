@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledRippleSize = styled.section`
   .gradient-image {
@@ -28,4 +28,4 @@ export const StyledRippleSize = styled.section`
     background-color: #131313;
     background-size: 20px 20px;
   }
-`
+`;

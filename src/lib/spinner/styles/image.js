@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { StyledBase } from './base'
+import styled from 'styled-components';
+import { StyledBase } from './base';
 
 export const StyledImage = styled(StyledBase)`
   position: relative;
@@ -24,4 +24,4 @@ export const StyledImage = styled(StyledBase)`
   [stop-color] {
     ${props => (`stop-color: ${(props.image.stopColor && props.fgcolor) ? props.fgcolor : props.theme.currentColor};`)}
   }
-`
+`;

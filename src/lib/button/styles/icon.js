@@ -1,11 +1,11 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 import {
   RIGHT, LEFT,
-  UNDEFINED, NULL
-} from '../../common/constant'
-import { isSvg } from '../../common/utils'
-import SVGInject from '@iconfu/svg-inject'
+  UNDEFINED, NULL,
+} from '../../common/constant';
+import { isSvg } from '../../common/utils';
+import SVGInject from '@iconfu/svg-inject';
 
 export const StyledIcon = styled.span`
   display: inline-block;
@@ -23,7 +23,7 @@ export const StyledIcon = styled.span`
     width: 100%;
     height: 100%;
   }
-`
+`;
 
 /**
  * has icon - 是否有icon
@@ -31,8 +31,8 @@ export const StyledIcon = styled.span`
  * @return { Boolean }  as follows: - 如下：
  */
 export const hasIcon = (icon) => {
-  return !!(icon && icon.src)
-}
+  return !!(icon && icon.src);
+};
 
 /**
  * get for has icon - 获取有icon样式
@@ -43,8 +43,8 @@ export const getForHasIcon = () => {
     .for-has-icon:not(:last-child) {
       margin-right: 0.5em;
     }
-  `
-}
+  `;
+};
 
 /**
  * get button text - 获取按钮文本
@@ -57,7 +57,7 @@ export const getButtonText = (children) => (
       {children}
     </span>
   ) : NULL
-)
+);
 
 /**
  * get styled icon - 获取styled图标
@@ -76,33 +76,33 @@ export const getStyledIcon = (icon, theme) => {
             SVGInject(event.currentTarget, {
               beforeInject: (img, svg) => {
                 if (icon.fill && !svg.fill) {
-                  const len = svg.querySelectorAll('[fill]').length
+                  const len = svg.querySelectorAll('[fill]').length;
                   if (len === 0) {
-                    svg.setAttribute('fill', theme.buttonMajorFgcolor)
+                    svg.setAttribute('fill', theme.buttonMajorFgcolor);
                   }
                 }
 
                 if (icon.stroke && !svg.stroke) {
-                  const len = svg.querySelectorAll('[stroke]').length
+                  const len = svg.querySelectorAll('[stroke]').length;
                   if (len === 0) {
-                    svg.setAttribute('stroke', theme.buttonMajorFgcolor)
+                    svg.setAttribute('stroke', theme.buttonMajorFgcolor);
                   }
                 }
 
                 if (icon.stopColor && !svg['stop-color']) {
-                  const len = svg.querySelectorAll('[stop-color]').length
+                  const len = svg.querySelectorAll('[stop-color]').length;
                   if (len === 0) {
-                    svg.setAttribute('stop-color', theme.buttonMajorFgcolor)
+                    svg.setAttribute('stop-color', theme.buttonMajorFgcolor);
                   }
                 }
-              }
-            })
+              },
+            });
           }
         }}
       />
     </StyledIcon>
-  )
-}
+  );
+};
 
 /**
  * get button text - 获取按钮文本
@@ -118,5 +118,5 @@ export const getIcon = (icon, theme, children) => {
       {getButtonText(children)}
       {icon.position === RIGHT ? getStyledIcon(icon, theme) : NULL}
     </>
-  )
-}
+  );
+};

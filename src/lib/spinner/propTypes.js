@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 export const propTypes = {
   fgcolor: PropTypes.string,
@@ -7,10 +7,10 @@ export const propTypes = {
     builtin: PropTypes.bool,
     fill: PropTypes.bool,
     stopColor: PropTypes.bool,
-    stroke: PropTypes.bool
+    stroke: PropTypes.bool,
   }),
   effect: PropTypes.string,
-  size: PropTypes.string
-}
+  size: PropTypes.string,
+};
 
-export default propTypes
+export default propTypes;

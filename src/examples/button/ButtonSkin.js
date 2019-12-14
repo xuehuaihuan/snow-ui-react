@@ -1,11 +1,11 @@
-import React from 'react'
-import { Button } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
+import React from 'react';
+import { Button } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
 import {
-  MAJOR, MINOR, PLAIN, SUCCESS, INFO, DANGER, WARNING, CUSTOM
-} from '../../lib/common/constant'
-import { StyledButtonSkin } from './styles/ButtonSkin'
+  MAJOR, MINOR, PLAIN, SUCCESS, INFO, DANGER, WARNING, CUSTOM,
+} from '../../lib/common/constant';
+import { StyledButtonSkin } from './styles/ButtonSkin';
 
 const ButtonSkin = () => {
   return (
@@ -78,7 +78,7 @@ const ButtonSkin = () => {
               bgcolor='#ff8140'
               active={{
                 fgcolor: '#eee',
-                bgcolor: '#e91930'
+                bgcolor: '#e91930',
               }}
             >
               customize active
@@ -91,12 +91,12 @@ const ButtonSkin = () => {
               bgcolor='#0084ff'
               active={{
                 fgcolor: '#fff',
-                bgcolor: '#43d480'
+                bgcolor: '#43d480',
               }}
               border={{
                 width: '3px',
                 style: 'solid',
-                color: '#f00'
+                color: '#f00',
               }}
             >
               skin = {CUSTOM}, setting border is invalid
@@ -118,7 +118,7 @@ const ButtonSkin = () => {
               bgcolor='#ff4200'
               active={{
                 fgcolor: '#fff',
-                bgcolor: '#ff0036'
+                bgcolor: '#ff0036',
               }}
             >
               skin!=='custom', bgcolor, fgcolor, active.bgcolor, or active.fgcolor can not be set
@@ -161,7 +161,7 @@ const ButtonSkin = () => {
         </div>
       </StyledButtonSkin>
     </>
-  )
-}
+  );
+};
 
-export default ButtonSkin
+export default ButtonSkin;

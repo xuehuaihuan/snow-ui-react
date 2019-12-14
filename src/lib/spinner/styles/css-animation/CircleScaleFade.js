@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { StyledBase } from '../base'
+import styled from 'styled-components';
+import { StyledBase } from '../base';
 
 export const StyledCircleScaleFade = styled(StyledBase)`
   position: relative;
@@ -74,4 +74,4 @@ export const StyledCircleScaleFade = styled(StyledBase)`
       transform: scale(1);
     }
   }
-`
+`;

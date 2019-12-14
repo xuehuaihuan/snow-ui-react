@@ -1,15 +1,15 @@
-import React from 'react'
-import { Button } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
+import React from 'react';
+import { Button } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
 import {
   MAJOR, MINOR, PLAIN, SUCCESS, INFO, DANGER, WARNING, CUSTOM,
   RECT, ROUNDED_RECT, CAPSULE, SQUARE, ROUNDED_SQUARE, CIRCLE, DIAMOND,
   DOTTED, DASHED, DOUBLE, GROOVE, RIDGE, INSET, OUTSET, SOLID,
   LG,
-  BORDER_BOX
-} from '../../lib/common/constant'
-import { StyledButtonBorder } from './styles/ButtonBorder'
+  BORDER_BOX,
+} from '../../lib/common/constant';
+import { StyledButtonBorder } from './styles/ButtonBorder';
 
 const ButtonBorder = () => {
   return (
@@ -43,7 +43,7 @@ const ButtonBorder = () => {
               hasBorder
               boxSizing={BORDER_BOX}
               border={{
-                style: DOTTED
+                style: DOTTED,
               }}
             >
             1px {DOTTED} minorColor
@@ -57,7 +57,7 @@ const ButtonBorder = () => {
               hasBorder
               border={{
                 width: '1px',
-                style: DASHED
+                style: DASHED,
               }}
               boxSizing={BORDER_BOX}
             >
@@ -71,7 +71,7 @@ const ButtonBorder = () => {
               size={LG}
               hasBorder
               border={{
-                style: DOTTED
+                style: DOTTED,
               }}
               boxSizing={BORDER_BOX}
             >
@@ -85,7 +85,7 @@ const ButtonBorder = () => {
               size={LG}
               hasBorder
               border={{
-                style: DASHED
+                style: DASHED,
               }}
               boxSizing={BORDER_BOX}
             >
@@ -111,7 +111,7 @@ const ButtonBorder = () => {
               hasBorder
               border={{
                 width: '5px',
-                style: GROOVE
+                style: GROOVE,
               }}
               boxSizing={BORDER_BOX}
             >
@@ -130,12 +130,12 @@ const ButtonBorder = () => {
               border={{
                 width: '3px',
                 style: INSET,
-                color: '#00b51d'
+                color: '#00b51d',
               }}
               active={{
                 fgcolor: '#fff',
                 bgcolor: '#ec414d',
-                borderColor: '#ec414d'
+                borderColor: '#ec414d',
               }}
             >
             3px {OUTSET} custom-color
@@ -153,12 +153,12 @@ const ButtonBorder = () => {
               border={{
                 width: '3px',
                 style: DOUBLE,
-                color: '#4fc08d'
+                color: '#4fc08d',
               }}
               active={{
                 fgcolor: '#61dafb',
                 bgcolor: '#20232a',
-                borderColor: '#0ff'
+                borderColor: '#0ff',
               }}
             >
             break reverse bgcolor - 破坏反转背景色
@@ -215,7 +215,7 @@ const ButtonBorder = () => {
               size={LG}
               hasBorder
               border={{
-                style: DASHED
+                style: DASHED,
               }}
               inverse
             >
@@ -230,7 +230,7 @@ const ButtonBorder = () => {
               hasBorder
               border={{
                 width: '1px',
-                style: DOTTED
+                style: DOTTED,
               }}
               inverse
             >
@@ -256,7 +256,7 @@ const ButtonBorder = () => {
               hasBorder
               border={{
                 width: '1px',
-                style: DOTTED
+                style: DOTTED,
               }}
               inverse
             >
@@ -270,7 +270,7 @@ const ButtonBorder = () => {
               size={LG}
               hasBorder
               border={{
-                style: DASHED
+                style: DASHED,
               }}
               inverse
             >
@@ -285,7 +285,7 @@ const ButtonBorder = () => {
               hasBorder
               border={{
                 width: '5px',
-                style: RIDGE
+                style: RIDGE,
               }}
               inverse
             >
@@ -304,12 +304,12 @@ const ButtonBorder = () => {
               border={{
                 width: '3px',
                 style: OUTSET,
-                color: '#ec414d'
+                color: '#ec414d',
               }}
               active={{
                 borderColor: '#00b51d',
                 bgcolor: '#00b51d',
-                fgcolor: '#fff'
+                fgcolor: '#fff',
               }}
             >
             3px {INSET} custom-color
@@ -327,12 +327,12 @@ const ButtonBorder = () => {
               border={{
                 width: '3px',
                 style: DOUBLE,
-                color: '#61dafb'
+                color: '#61dafb',
               }}
               active={{
                 fgcolor: '#fff',
                 bgcolor: '#4fc08d',
-                borderColor: '#4fc08d'
+                borderColor: '#4fc08d',
               }}
             >
             break reverse bgcolor - 破坏反转背景色
@@ -381,7 +381,7 @@ const ButtonBorder = () => {
               size={LG}
               hasHalfpxBorder
               border={{
-                style: DASHED
+                style: DASHED,
               }}
             >
             0.5px {DASHED} majorColor
@@ -404,7 +404,7 @@ const ButtonBorder = () => {
               size={LG}
               hasHalfpxBorder
               border={{
-                style: DOTTED
+                style: DOTTED,
               }}
             >
             0.5px {DOTTED} plainColor
@@ -427,7 +427,7 @@ const ButtonBorder = () => {
               size={LG}
               hasHalfpxBorder
               border={{
-                style: DOTTED
+                style: DOTTED,
               }}
             >
             0.5px {DOTTED} infoColor
@@ -440,7 +440,7 @@ const ButtonBorder = () => {
               size={LG}
               hasHalfpxBorder
               border={{
-                style: DASHED
+                style: DASHED,
               }}
             >
             0.5px {DASHED} dangerColor
@@ -453,7 +453,7 @@ const ButtonBorder = () => {
               size={LG}
               hasHalfpxBorder
               border={{
-                style: RIDGE
+                style: RIDGE,
               }}
             >
             0.5px {RIDGE} warningColor
@@ -469,12 +469,12 @@ const ButtonBorder = () => {
               fgcolor='#00b51d'
               border={{
                 style: INSET,
-                color: '#00b51d'
+                color: '#00b51d',
               }}
               active={{
                 fgcolor: '#fff',
                 bgcolor: '#ec414d',
-                borderColor: '#ec414d'
+                borderColor: '#ec414d',
               }}
             >
             0.5px {INSET} custom-color
@@ -491,12 +491,12 @@ const ButtonBorder = () => {
               border={{
                 width: '3px',
                 style: DOUBLE,
-                color: '#4fc08d'
+                color: '#4fc08d',
               }}
               active={{
                 fgcolor: '#61dafb',
                 bgcolor: '#20232a',
-                borderColor: '#0ff'
+                borderColor: '#0ff',
               }}
             >
             0.5px double custom-color, setting border.width is invalid
@@ -527,7 +527,7 @@ const ButtonBorder = () => {
               size={LG}
               hasHalfpxBorder
               border={{
-                style: DOTTED
+                style: DOTTED,
               }}
               inverse
             >
@@ -552,7 +552,7 @@ const ButtonBorder = () => {
               size={LG}
               hasHalfpxBorder
               border={{
-                style: DASHED
+                style: DASHED,
               }}
               inverse
             >
@@ -577,7 +577,7 @@ const ButtonBorder = () => {
               size={LG}
               hasHalfpxBorder
               border={{
-                style: DASHED
+                style: DASHED,
               }}
               inverse
             >
@@ -591,7 +591,7 @@ const ButtonBorder = () => {
               size={LG}
               hasHalfpxBorder
               border={{
-                style: DOTTED
+                style: DOTTED,
               }}
               inverse
             >
@@ -605,7 +605,7 @@ const ButtonBorder = () => {
               size={LG}
               hasHalfpxBorder
               border={{
-                style: GROOVE
+                style: GROOVE,
               }}
               inverse
             >
@@ -622,13 +622,13 @@ const ButtonBorder = () => {
               fgcolor='#ec414d'
               border={{
                 style: OUTSET,
-                color: '#ec414d'
+                color: '#ec414d',
               }}
               inverse
               active={{
                 borderColor: '#00b51d',
                 bgcolor: '#00b51d',
-                fgcolor: '#fff'
+                fgcolor: '#fff',
               }}
             >
             0.5px {OUTSET} custom-color
@@ -646,12 +646,12 @@ const ButtonBorder = () => {
               border={{
                 width: '3px',
                 style: DOUBLE,
-                color: '#61dafb'
+                color: '#61dafb',
               }}
               active={{
                 fgcolor: '#fff',
                 bgcolor: '#4fc08d',
-                borderColor: '#4fc08d'
+                borderColor: '#4fc08d',
               }}
             >
             0.5px dotted custom-color, setting border.width is invalid
@@ -674,7 +674,7 @@ const ButtonBorder = () => {
         </div>
       </StyledButtonBorder>
     </>
-  )
-}
+  );
+};
 
-export default ButtonBorder
+export default ButtonBorder;

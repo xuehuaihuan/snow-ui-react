@@ -1,14 +1,14 @@
-import React from 'react'
-import { Button } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
+import React from 'react';
+import { Button } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
 import {
   MAJOR, MINOR, PLAIN, SUCCESS, INFO, DANGER, WARNING, CUSTOM,
   ROUNDED_RECT, CAPSULE, DIAMOND,
   XXL,
-  DASHED, DOTTED, RIDGE, GROOVE
-} from '../../lib/common/constant'
-import { StyledButtonBlock } from './styles/ButtonBlock'
+  DASHED, DOTTED, RIDGE, GROOVE,
+} from '../../lib/common/constant';
+import { StyledButtonBlock } from './styles/ButtonBlock';
 
 const ButtonBlock = () => {
   return (
@@ -36,7 +36,7 @@ const ButtonBlock = () => {
               hasHalfpxBorder
               inverse
               border={{
-                style: DASHED
+                style: DASHED,
               }}
             >
               {MINOR}
@@ -71,7 +71,7 @@ const ButtonBlock = () => {
               hasBorder
               border={{
                 width: '5px',
-                style: RIDGE
+                style: RIDGE,
               }}
               inverse
             >
@@ -86,7 +86,7 @@ const ButtonBlock = () => {
               block
               hasHalfpxBorder
               border={{
-                style: DOTTED
+                style: DOTTED,
               }}
             >
               {DANGER}
@@ -113,14 +113,14 @@ const ButtonBlock = () => {
               border={{
                 width: '3px',
                 style: GROOVE,
-                color: '#ffc300'
+                color: '#ffc300',
               }}
               bgcolor='#ffc300'
               fgcolor='#222'
               active={{
                 borderColor: '#ff0036',
                 bgcolor: '#ff0036',
-                fgcolor: '#fff'
+                fgcolor: '#fff',
               }}
             >
               {CUSTOM}
@@ -129,7 +129,7 @@ const ButtonBlock = () => {
         </ExampleList>
       </StyledButtonBlock>
     </>
-  )
-}
+  );
+};
 
-export default ButtonBlock
+export default ButtonBlock;

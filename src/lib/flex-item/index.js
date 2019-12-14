@@ -1,8 +1,8 @@
-import React from 'react'
-import { StyledFlexItem } from './styles'
+import React from 'react';
+import { StyledFlexItem } from './styles';
 
 export const FlexItem = (props) => {
-  return React.createElement(StyledFlexItem, props)
-}
+  return React.createElement(StyledFlexItem, props);
+};
 
-export default FlexItem
+export default FlexItem;

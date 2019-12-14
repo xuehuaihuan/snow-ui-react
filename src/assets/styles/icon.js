@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import iconNavBeta from '../img/icons/icon-nav-beta.png'
+import { createGlobalStyle } from 'styled-components';
+import iconNavBeta from '../img/icons/icon-nav-beta.png';
 
 export const GlobalIconStyle = createGlobalStyle`
 .icon {
@@ -13,4 +13,4 @@ export const GlobalIconStyle = createGlobalStyle`
   background: url(${iconNavBeta}) center;
   background-size: contain;
 }
-`
+`;

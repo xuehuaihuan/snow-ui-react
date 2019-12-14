@@ -1,11 +1,11 @@
-import React from 'react'
-import { Ripple } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
+import React from 'react';
+import { Ripple } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
 import {
-  majorColor, minorColor, plainColor, successColor, infoColor, dangerColor, warningColor
-} from '../../lib/common/theme'
-import { StyledRippleCenterMode } from './styles/RippleCenterMode'
+  majorColor, minorColor, plainColor, successColor, infoColor, dangerColor, warningColor,
+} from '../../lib/common/theme';
+import { StyledRippleCenterMode } from './styles/RippleCenterMode';
 
 const RippleFgcolor = () => {
   return (
@@ -26,7 +26,7 @@ const RippleFgcolor = () => {
                 <div className='gradient-image cross-dots' />
               </Ripple>
               <figcaption style={{
-                color: majorColor
+                color: majorColor,
               }}
               >
                 majorColor
@@ -42,7 +42,7 @@ const RippleFgcolor = () => {
                 <div className='gradient-image cross-dots' />
               </Ripple>
               <figcaption style={{
-                color: minorColor
+                color: minorColor,
               }}
               >
                 minorColor
@@ -59,7 +59,7 @@ const RippleFgcolor = () => {
               </Ripple>
               <figcaption style={{
                 backgroundColor: '#000',
-                color: plainColor
+                color: plainColor,
               }}
               >
                 plainColor
@@ -75,7 +75,7 @@ const RippleFgcolor = () => {
                 <div className='gradient-image cross-dots' />
               </Ripple>
               <figcaption style={{
-                color: successColor
+                color: successColor,
               }}
               >
                 successColor
@@ -91,7 +91,7 @@ const RippleFgcolor = () => {
                 <div className='gradient-image cross-dots' />
               </Ripple>
               <figcaption style={{
-                color: infoColor
+                color: infoColor,
               }}
               >
                 infoColor
@@ -107,7 +107,7 @@ const RippleFgcolor = () => {
                 <div className='gradient-image cross-dots' />
               </Ripple>
               <figcaption style={{
-                color: dangerColor
+                color: dangerColor,
               }}
               >
                 dangerColor
@@ -123,7 +123,7 @@ const RippleFgcolor = () => {
                 <div className='gradient-image cross-dots' />
               </Ripple>
               <figcaption style={{
-                color: warningColor
+                color: warningColor,
               }}
               >
                 warningColor
@@ -139,7 +139,7 @@ const RippleFgcolor = () => {
                 <div className='gradient-image cross-dots' />
               </Ripple>
               <figcaption style={{
-                color: '#026873'
+                color: '#026873',
               }}
               >
                 any color you want
@@ -149,7 +149,7 @@ const RippleFgcolor = () => {
         </ExampleList>
       </StyledRippleCenterMode>
     </>
-  )
-}
+  );
+};
 
-export default RippleFgcolor
+export default RippleFgcolor;

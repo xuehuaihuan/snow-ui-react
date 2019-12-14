@@ -1,5 +1,5 @@
-import React from 'react'
-import { StyledLineSquareBounce, StyledLineSquareBounceInner } from '../styles'
+import React from 'react';
+import { StyledLineSquareBounce, StyledLineSquareBounceInner } from '../styles';
 
 const LineSquareBounce = (props) => {
   return React.createElement(StyledLineSquareBounce, props, [
@@ -7,8 +7,8 @@ const LineSquareBounce = (props) => {
     React.createElement(StyledLineSquareBounceInner, { key: '2', ...props }),
     React.createElement(StyledLineSquareBounceInner, { key: '3', ...props }),
     React.createElement(StyledLineSquareBounceInner, { key: '4', ...props }),
-    React.createElement(StyledLineSquareBounceInner, { key: '5', ...props })
-  ])
-}
+    React.createElement(StyledLineSquareBounceInner, { key: '5', ...props }),
+  ]);
+};
 
-export default LineSquareBounce
+export default LineSquareBounce;

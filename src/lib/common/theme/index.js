@@ -1,4 +1,4 @@
-import * as theme from './config'
+import * as theme from './config';
 
-export * from './config'
-export default theme
+export * from './config';
+export default theme;

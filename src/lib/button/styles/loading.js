@@ -1,15 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Spinner } from '../../spinner'
-import { isObject } from '../../common/utils'
-import { getButtonText } from './icon'
+import React from 'react';
+import styled from 'styled-components';
+import { Spinner } from '../../spinner';
+import { isObject } from '../../common/utils';
+import { getButtonText } from './icon';
 
 export const StyledLoading = styled(Spinner)`
   &,
   & + .button-text {
     vertical-align: middle;
   }
-`
+`;
 
 /**
  * get button text - 获取按钮文本
@@ -29,5 +29,5 @@ export const getLoading = (loading, size, children) => {
       />
       {getButtonText(children)}
     </>
-  )
-}
+  );
+};

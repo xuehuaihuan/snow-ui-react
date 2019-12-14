@@ -1,9 +1,9 @@
-import React from 'react'
-import { StyledSpinnerExamples } from './styles'
-import SpinnerFgcolor from './SpinnerFgcolor'
-import SpinnerSize from './SpinnerSize'
-import SpinnerEffect from './SpinnerEffect'
-import SpinnerImage from './SpinnerImage'
+import React from 'react';
+import { StyledSpinnerExamples } from './styles';
+import SpinnerFgcolor from './SpinnerFgcolor';
+import SpinnerSize from './SpinnerSize';
+import SpinnerEffect from './SpinnerEffect';
+import SpinnerImage from './SpinnerImage';
 
 export const SpinnerExamples = (props) => {
   return (
@@ -13,7 +13,7 @@ export const SpinnerExamples = (props) => {
       <SpinnerEffect />
       <SpinnerImage />
     </StyledSpinnerExamples>
-  )
-}
+  );
+};
 
-export default SpinnerExamples
+export default SpinnerExamples;

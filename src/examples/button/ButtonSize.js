@@ -1,12 +1,12 @@
-import React from 'react'
-import { Button } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
+import React from 'react';
+import { Button } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
 import {
   MAJOR, MINOR, PLAIN, SUCCESS, INFO, DANGER, WARNING,
-  XXS, XS, SM, MD, LG, XL, XXL
-} from '../../lib/common/constant'
-import { StyledButtonSize } from './styles/ButtonSize'
+  XXS, XS, SM, MD, LG, XL, XXL,
+} from '../../lib/common/constant';
+import { StyledButtonSize } from './styles/ButtonSize';
 
 const ButtonSize = () => {
   return (
@@ -75,7 +75,7 @@ const ButtonSize = () => {
         </ExampleList>
       </StyledButtonSize>
     </>
-  )
-}
+  );
+};
 
-export default ButtonSize
+export default ButtonSize;

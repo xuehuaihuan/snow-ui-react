@@ -1,15 +1,15 @@
-import React from 'react'
-import { Button } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
+import React from 'react';
+import { Button } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
 import {
   MAJOR, MINOR, PLAIN, SUCCESS, INFO, DANGER, WARNING, CUSTOM,
   ROUNDED_RECT, DIAMOND, CAPSULE,
   RIPPLE,
   XXL,
-  DASHED
-} from '../../lib/common/constant'
-import { StyledButtonRipple } from './styles/ButtonRipple'
+  DASHED,
+} from '../../lib/common/constant';
+import { StyledButtonRipple } from './styles/ButtonRipple';
 
 const ButtonRipple = () => {
   return (
@@ -57,7 +57,7 @@ const ButtonRipple = () => {
               size={XXL}
               hasHalfpxBorder
               ripple={{
-                centerMode: true
+                centerMode: true,
               }}
             >
               ripple start always center
@@ -83,7 +83,7 @@ const ButtonRipple = () => {
               hasHalfpxBorder
               inverse
               ripple={{
-                centerMode: true
+                centerMode: true,
               }}
             >
               ripple start always center
@@ -97,10 +97,10 @@ const ButtonRipple = () => {
               size={XXL}
               hasHalfpxBorder
               border={{
-                style: DASHED
+                style: DASHED,
               }}
               ripple={{
-                fgcolor: '#0084ff'
+                fgcolor: '#0084ff',
               }}
             >
               customize ripple color
@@ -115,7 +115,7 @@ const ButtonRipple = () => {
               bgcolor='#ff8140'
               ripple={{
                 centerMode: true,
-                fgcolor: '#43d480'
+                fgcolor: '#43d480',
               }}
             >
               customize ripple color
@@ -124,7 +124,7 @@ const ButtonRipple = () => {
         </ExampleList>
       </StyledButtonRipple>
     </>
-  )
-}
+  );
+};
 
-export default ButtonRipple
+export default ButtonRipple;

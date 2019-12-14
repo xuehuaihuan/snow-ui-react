@@ -1,11 +1,11 @@
-import React from 'react'
-import { Spinner } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
-import { StyledSpinnerEffect } from './styles/SpinnerEffect'
+import React from 'react';
+import { Spinner } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
+import { StyledSpinnerEffect } from './styles/SpinnerEffect';
 import {
-  majorColor, minorColor, plainColor, successColor, infoColor, dangerColor, warningColor
-} from '../../lib/common/theme'
+  majorColor, minorColor, plainColor, successColor, infoColor, dangerColor, warningColor,
+} from '../../lib/common/theme';
 
 const SpinnerEffect = () => {
   return (
@@ -69,7 +69,7 @@ const SpinnerEffect = () => {
         </ExampleList>
       </StyledSpinnerEffect>
     </>
-  )
-}
+  );
+};
 
-export default SpinnerEffect
+export default SpinnerEffect;

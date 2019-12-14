@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledButtonSize = styled.section`
   .button-list {
@@ -6,4 +6,4 @@ export const StyledButtonSize = styled.section`
       padding: ${props => props.theme.scpx(5)} ${props => props.theme.scpx(10)};
     }
   }
-`
+`;

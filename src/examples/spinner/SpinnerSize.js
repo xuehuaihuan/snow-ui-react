@@ -1,14 +1,14 @@
-import React from 'react'
-import { Spinner } from '../../lib'
-import ExamplesHeader from '../common/header'
-import ExampleList from '../common/list'
+import React from 'react';
+import { Spinner } from '../../lib';
+import ExamplesHeader from '../common/header';
+import ExampleList from '../common/list';
 import {
-  XXS, XS, SM, MD, LG, XL, XXL, CUSTOM
-} from '../../lib/common/constant'
-import { StyledSpinnerSize } from './styles/SpinnerSize'
+  XXS, XS, SM, MD, LG, XL, XXL, CUSTOM,
+} from '../../lib/common/constant';
+import { StyledSpinnerSize } from './styles/SpinnerSize';
 import {
-  majorColor, minorColor, plainColor, successColor, infoColor, dangerColor, warningColor
-} from '../../lib/common/theme'
+  majorColor, minorColor, plainColor, successColor, infoColor, dangerColor, warningColor,
+} from '../../lib/common/theme';
 
 const SpinnerSize = () => {
   return (
@@ -78,7 +78,7 @@ const SpinnerSize = () => {
             />
             <p
               className='subtitle' style={{
-                color: '#0084ff'
+                color: '#0084ff',
               }}
             >any size you want
             </p>
@@ -100,7 +100,7 @@ const SpinnerSize = () => {
         </div>
       </StyledSpinnerSize>
     </>
-  )
-}
+  );
+};
 
-export default SpinnerSize
+export default SpinnerSize;
