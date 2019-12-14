@@ -23,11 +23,11 @@ const ExamplesHeader = (props) => {
 };
 
 ExamplesHeader.defaultProps = {
-  subtitle: 'subtitle',
+  subtitle: '',
 };
 
 ExamplesHeader.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.any,
   subtitle: PropTypes.string,
 };
 
