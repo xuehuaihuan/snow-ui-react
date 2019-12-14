@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PropTypes from 'prop-types';
 
-function App() {
+import theme from './lib/common/theme';
+import { ThemeProvider } from 'styled-components';
+import { GlobalIconfontStyle } from './assets/iconfont';
+import {
+  GlobalStyle,
+  GlobalTextStyle,
+  GlobalIconStyle,
+} from './assets/styles';
+
+const App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className='app'>
+        {props.children}
+        <GlobalStyle />
+        <GlobalIconfontStyle />
+        <GlobalIconStyle />
+        <GlobalTextStyle />
+      </div>
+    </ThemeProvider>
   );
-}
+};
+
+App.defaultProps = {};
+
+App.propTypes = {
+  children: PropTypes.object,
+};
 
 export default App;
