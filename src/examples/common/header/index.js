@@ -1,10 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import StyledHeader from './styles';
 
-const subtitle = (props) => {
+const subtitle = (subtitle) => {
   return (
     <p className='subtitle'>
-      {props.subtitle}
+      {subtitle}
     </p>
   );
 };
@@ -15,9 +17,18 @@ const ExamplesHeader = (props) => {
       <h3 className='title'>
         {props.children}
       </h3>
-      {props.subtitle ? subtitle(props) : ''}
+      {props.subtitle ? subtitle(props.subtitle) : ''}
     </StyledHeader>
   );
+};
+
+ExamplesHeader.defaultProps = {
+  subtitle: 'subtitle',
+};
+
+ExamplesHeader.propTypes = {
+  children: PropTypes.object,
+  subtitle: PropTypes.string,
 };
 
 export default ExamplesHeader;
