@@ -12,14 +12,14 @@ const list = [
     path: '/button',
   },
   {
-    title: 'Spinner icon（旋转图标）',
-    id: 'spinner',
-    path: '/spinner',
-  },
-  {
     title: 'Ripple（涟漪）',
     id: 'ripple',
     path: '/ripple',
+  },
+  {
+    title: 'Spinner（旋转器）',
+    id: 'spinner',
+    path: '/spinner',
   },
 ];
 

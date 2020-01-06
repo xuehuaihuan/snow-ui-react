@@ -13,7 +13,7 @@ const subtitle = (subtitle) => {
 
 const ExamplesHeader = (props) => {
   return (
-    <StyledHeader>
+    <StyledHeader className='halfpx-border border-bottom'>
       <h3 className='title'>
         {props.children}
       </h3>
