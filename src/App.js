@@ -8,6 +8,7 @@ import {
   GlobalStyle,
   GlobalTextStyle,
   GlobalIconStyle,
+  GlobalHalfpxBorderStyle,
 } from './assets/styles';
 
 const App = (props) => {
@@ -19,6 +20,7 @@ const App = (props) => {
         <GlobalIconfontStyle />
         <GlobalIconStyle />
         <GlobalTextStyle />
+        <GlobalHalfpxBorderStyle />
       </div>
     </ThemeProvider>
   );

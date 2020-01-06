@@ -33,11 +33,12 @@ class Home extends Component {
     return (
       <StyledHome>
         {
-          this.list.map((item) => {
+          this.list.map((item, index) => {
             return (
               <Flex
                 key={item.id}
                 onClick={() => this.handleClickItem(item)}
+                className={index === 0 ? '' : 'halfpx-border border-top'}
               >
                 <FlexItem flex={1}>
                   <h4>{item.title}</h4>
