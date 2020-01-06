@@ -1,11 +1,16 @@
 import asyncComponent from './async-component';
 
 const routes = [
-  // {
-  //   path: '/',
-  //   component: asyncComponent(() => import('../examples/button')),
-  //   exact: true,
-  // },
+  {
+    path: '/',
+    component: asyncComponent(() => import('../views/home')),
+    exact: true,
+  },
+  {
+    path: '/home',
+    component: asyncComponent(() => import('../views/home')),
+    exact: true,
+  },
   {
     path: '/button',
     component: asyncComponent(() => import('../examples/button')),

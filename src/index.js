@@ -11,6 +11,8 @@ import routes from './router';
 
 const Routes = renderRoutes(routes);
 
+document.body.addEventListener('touchstart', function () {});
+
 ReactDOM.render(
   <BrowserRouter>
     <App>

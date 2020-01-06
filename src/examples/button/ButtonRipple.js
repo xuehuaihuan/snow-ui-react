@@ -70,6 +70,9 @@ const ButtonRipple = () => {
               size={XXL}
               hasBorder
               inverse
+              ripple={{
+                centerMode: true,
+              }}
             >
               ripple start always center
             </Button>
