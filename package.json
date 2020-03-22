@@ -43,9 +43,10 @@
     "babel-eslint": "^10.0.3",
     "eslint-config-standard": "^14.1.0",
     "eslint-config-standard-react": "^9.2.0",
+    "gh-pages": "^2.2.0",
     "prop-types": "^15.7.2",
-    "styled-components": "^4.4.1",
     "standardx": "^5.0.0",
+    "styled-components": "^4.4.1",
     "stylelint-config-standard": "^19.0.0"
   }
 }
