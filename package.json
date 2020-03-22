@@ -2,6 +2,15 @@
   "name": "xue-ui-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "standardx": "standardx --fix",
+    "deploy": "gh-pages -d build"
+  },
   "dependencies": {
     "@iconfu/svg-inject": "^1.2.3",
     "@testing-library/jest-dom": "^4.2.4",
@@ -14,12 +23,15 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "standardx": "standardx --fix"
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "gh-pages": "^2.2.0",
+    "prop-types": "^15.7.2",
+    "standardx": "^5.0.0",
+    "styled-components": "^4.4.1",
+    "stylelint-config-standard": "^19.0.0"
   },
   "eslintConfig": {
     "extends": [
@@ -38,15 +50,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-config-standard-react": "^9.2.0",
-    "gh-pages": "^2.2.0",
-    "prop-types": "^15.7.2",
-    "standardx": "^5.0.0",
-    "styled-components": "^4.4.1",
-    "stylelint-config-standard": "^19.0.0"
   }
 }
