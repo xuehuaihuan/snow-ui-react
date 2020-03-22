@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 
 import './index.css';
@@ -14,11 +14,11 @@ const Routes = renderRoutes(routes);
 document.body.addEventListener('touchstart', function () {});
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter>
     <App>
       {Routes}
     </App>
-  </BrowserRouter>
+  </HashRouter>
   , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
