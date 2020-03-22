@@ -1,29 +1,33 @@
-import asyncComponent from './async-component';
+//import asyncComponent from './async-component';
+import Home from '../views/home';
+import Button from '../examples/button';
+import Ripple from '../examples/ripple';
+import Spinner from '../examples/spinner';
 
 const routes = [
   {
     path: '/',
-    component: asyncComponent(() => import('../views/home')),
+    component: Home,
     exact: true,
   },
   {
     path: '/home',
-    component: asyncComponent(() => import('../views/home')),
+    component: Home,
     exact: true,
   },
   {
     path: '/button',
-    component: asyncComponent(() => import('../examples/button')),
+    component: Button,
     exact: true,
   },
   {
     path: '/ripple',
-    component: asyncComponent(() => import('../examples/ripple')),
+    component: Ripple,
     exact: true,
   },
   {
     path: '/spinner',
-    component: asyncComponent(() => import('../examples/spinner')),
+    component: Spinner,
     exact: true,
   },
 ];
