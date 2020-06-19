@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -20,10 +20,11 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-          presets: ['babel-preset-react-app'],
-        }
-      }
-    ]
+          presets: ['@babel/preset-react'],
+          plugins: ['@babel/plugin-proposal-class-properties'],
+        },
+      },
+    ],
   },
 
   // optimization: {
@@ -40,22 +41,22 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin(
-        {
-          inject: true,
-          template: 'public/index.html',
-          minify: {
-            removeComments: true,
-            collapseWhitespace: true,
-            removeRedundantAttributes: true,
-            useShortDoctype: true,
-            removeEmptyAttributes: true,
-            removeStyleLinkTypeAttributes: true,
-            keepClosingSlash: true,
-            minifyJS: true,
-            minifyCSS: true,
-            minifyURLs: true,
-          },
-        }
+      {
+        inject: true,
+        template: 'public/index.html',
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          removeRedundantAttributes: true,
+          useShortDoctype: true,
+          removeEmptyAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          keepClosingSlash: true,
+          minifyJS: true,
+          minifyCSS: true,
+          minifyURLs: true,
+        },
+      },
     ),
-  ]
-}
+  ],
+};

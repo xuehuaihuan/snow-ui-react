@@ -1,19 +1,19 @@
-const path = require('path')
-const buble = require('@rollup/plugin-buble')
+const path = require('path');
+const buble = require('@rollup/plugin-buble');
 // const flow = require('rollup-plugin-flow-no-whitespace')
-const {babel} = require('@rollup/plugin-babel')
-const cjs = require('@rollup/plugin-commonjs')
-const {nodeResolve} = require('@rollup/plugin-node-resolve');
-const replace = require('@rollup/plugin-replace')
-const version = process.env.VERSION || require('../package.json').version
+const { babel } = require('@rollup/plugin-babel');
+const cjs = require('@rollup/plugin-commonjs');
+const { nodeResolve } = require('@rollup/plugin-node-resolve');
+const replace = require('@rollup/plugin-replace');
+const version = process.env.VERSION || require('../package.json').version;
 const banner =
 `/*!
   * xue-ui-react v${version}
   * (c) ${new Date().getFullYear()} Huaihuan Xue
   * @license MIT
-  */`
+  */`;
 
-const resolve = _path => path.resolve(__dirname, '../', _path)
+const resolve = _path => path.resolve(__dirname, '../', _path);
 
 module.exports = [
   {
@@ -49,14 +49,14 @@ module.exports = [
     format: 'es',
     env: 'production',
     // transpile: false,
-  }
-].map(genConfig)
+  },
+].map(genConfig);
 
 function genConfig (options) {
-  let external = ['@babel/runtime', 'react', 'styled-components', 'polished', 'prop-types']
+  const external = ['@babel/runtime', 'react', 'styled-components', 'polished', 'prop-types'];
 
   if (options.format === 'es' || options.format === 'cjs') {
-    external.shift()
+    external.shift();
   }
 
   const config = {
@@ -88,14 +88,14 @@ function genConfig (options) {
         react: 'React',
         'prop-types': 'PropTypes',
         'styled-components': 'styled',
-      }
+      },
     },
-  }
+  };
 
   if (options.env) {
     config.input.plugins.unshift(replace({
-      'process.env.NODE_ENV': JSON.stringify(options.env)
-    }))
+      'process.env.NODE_ENV': JSON.stringify(options.env),
+    }));
   }
 
   if (options.transpile) {
@@ -108,8 +108,8 @@ function genConfig (options) {
       //   dangerousTaggedTemplateString: true,
       //   dangerousForOf: true,
       // },
-    }))
+    }));
   }
 
-  return config
+  return config;
 }
