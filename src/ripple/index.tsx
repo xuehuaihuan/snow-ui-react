@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import defaultProps from './defaultProps';
 import { RippleProps, RippleState } from './PropsType';
 import {
   getTouchEvent, getRect, getScrollLeft, getScrollTop,
@@ -8,15 +7,19 @@ import {
 import { StyledRipple, StyledRippleItem } from './styles';
 import { RIPPLE_LIST_CLASS, RIPPLE_ITEM_CLASS, RIPPLE_EFFECT_CLASS } from './constants';
 import { getSize } from './styles/size';
+import { MD } from '../common/constants';
 
 export class Ripple extends Component<RippleProps, RippleState> {
-  static defaultProps: RippleProps = defaultProps;
+  static defaultProps: RippleProps = {
+    centerMode: false,
+    fgcolor: '',
+    size: MD,
+  };
 
   touchEvent: any;
   rippleNode: any;
   now: any = Date.now() || (+new Date());
   seed = 0;
-  props: RippleProps = {}
   setState: any;
   state: RippleState = {
     children: [],
