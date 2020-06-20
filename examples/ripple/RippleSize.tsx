@@ -1,13 +1,13 @@
 import React from 'react';
-import { Ripple } from '../../src';
+import { Ripple } from 'xue-ui-react';
 import ExamplesHeader from '../common/header';
 import ExampleList from '../common/list';
 import {
   majorColor, minorColor, plainColor, successColor, infoColor, dangerColor, warningColor,
-} from '../../src/common/theme';
+} from '@/common/theme';
 import {
   XXS, XS, SM, MD, LG, XL, XXL,
-} from '../../src/common/constants';
+} from '@/common/constants';
 import { StyledRippleSize } from './styles/RippleSize';
 
 const RippleSize = () => {

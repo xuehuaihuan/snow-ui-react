@@ -4,10 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
-  entry: path.join(__dirname, '/index.js'),
+  entry: path.resolve(__dirname, '..', 'examples/index.tsx'),
 
   output: {
-    path: path.join(__dirname, 'public'),
+    path: path.resolve(__dirname, '..', 'public'),
     filename: '[name].js',
     chunkFilename: '[id].chunk.js',
     // publicPath: '/',
@@ -16,7 +16,19 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|mjs|jsx|ts|tsx)$/,
+        test: /\.(jsx|ts|tsx)$/,
+        exclude: /node_modules/,
+        loader: 'ts-loader',
+        // options: {
+        //   compilerOptions: {
+        //     jsx: 'react',
+        //     target: 'ESNext',
+        //     allowSyntheticDefaultImports: true,
+        //   },
+        // },
+      },
+      {
+        test: /\.(js|mjs)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
@@ -59,4 +71,12 @@ module.exports = {
       },
     ),
   ],
+
+  resolve: {
+    extensions: ['.tsx', '.js'],
+    alias: {
+      'xue-ui-react': path.join(__dirname, '..', 'dist/xue-ui-react.esm.js'),
+      '@': path.resolve(__dirname, '..', 'src'),
+    },
+  },
 };

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "ESNext",
+    "allowSyntheticDefaultImports": true,
+  },
+  "typeRoots": [
+    "node_modules/@types", "typings/index.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

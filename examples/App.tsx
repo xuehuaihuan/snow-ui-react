@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { ReactElement } from 'react';
 
-import theme from '../src/common/theme';
+import theme from '@/common/theme';
 import { ThemeProvider } from 'styled-components';
+import { AppProps } from './PropsType';
 // import { GlobalIconfontStyle } from './assets/iconfont';
 // import {
 //   GlobalStyle,
@@ -11,7 +11,7 @@ import { ThemeProvider } from 'styled-components';
 //   GlobalHalfpxBorderStyle,
 // } from './assets/styles';
 
-const App = (props) => {
+export const App = (props: AppProps): ReactElement => {
   return (
     <ThemeProvider theme={theme}>
       <div className='app'>
@@ -26,10 +26,10 @@ const App = (props) => {
   );
 };
 
-App.defaultProps = {};
+// App.defaultProps = {};
 
-App.propTypes = {
-  children: PropTypes.any,
-};
+// App.propTypes = {
+//   children: any,
+// };
 
 export default App;
