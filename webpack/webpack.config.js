@@ -10,7 +10,6 @@ module.exports = {
     path: path.resolve(__dirname, '..', 'public'),
     filename: '[name].js',
     chunkFilename: '[id].chunk.js',
-    // publicPath: '/',
   },
 
   module: {
@@ -19,13 +18,6 @@ module.exports = {
         test: /\.(jsx|ts|tsx)$/,
         exclude: /node_modules/,
         loader: 'ts-loader',
-        // options: {
-        //   compilerOptions: {
-        //     jsx: 'react',
-        //     target: 'ESNext',
-        //     allowSyntheticDefaultImports: true,
-        //   },
-        // },
       },
       {
         test: /\.(js|mjs)$/,
@@ -39,17 +31,17 @@ module.exports = {
     ],
   },
 
-  // optimization: {
-  //   splitChunks: {
-  //     cacheGroups: {
-  //       shared: {
-  //         name: 'shared',
-  //         chunks: 'initial',
-  //         minChunks: 2
-  //       }
-  //     }
-  //   }
-  // },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        shared: {
+          name: 'shared',
+          chunks: 'initial',
+          minChunks: 2,
+        },
+      },
+    },
+  },
 
   plugins: [
     new HtmlWebpackPlugin(

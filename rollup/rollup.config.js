@@ -62,11 +62,11 @@ function genConfig (options) {
       input: resolve('src/index.tsx'),
       plugins: [
         typescript(
-          {
-            jsx: 'react',
-            target: 'ESNext',
-            allowSyntheticDefaultImports: true,
-          },
+          // {
+          //   jsx: 'react',
+          //   target: 'ESNext',
+          //   allowSyntheticDefaultImports: true,
+          // },
         ),
         babel({
           presets: ['@babel/preset-react'],

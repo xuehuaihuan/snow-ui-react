@@ -1,5 +1,7 @@
 module.exports = {
   "extends": [
+    'standard-react',
+    'standard',
     "plugin:@typescript-eslint/recommended",
   ],
   "parser": "@typescript-eslint/parser",

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { Ripple } from 'xue-ui-react';
+
 import ExamplesHeader from '../common/header';
 import ExampleList from '../common/list';
 import {
@@ -7,7 +8,7 @@ import {
 } from '@/common/theme';
 import { StyledRippleFgcolor } from './styles/RippleFgcolor';
 
-const RippleFgcolor = () => {
+const RippleFgcolor = (): ReactElement => {
   return (
     <>
       <StyledRippleFgcolor className='section-item'>
