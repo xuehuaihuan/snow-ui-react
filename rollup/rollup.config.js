@@ -61,10 +61,14 @@ function genConfig (options) {
     input: {
       input: resolve('src/index.tsx'),
       plugins: [
-        typescript(),
+        typescript(
+          // following options read and use tsconfig.json
+          // {},
+        ),
         babel(
           {
             babelHelpers: 'runtime',
+            // following options read and use babel.config.js
           },
         ),
         cjs(),

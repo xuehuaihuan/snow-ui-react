@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const babelLoader = {
   loader: 'babel-loader',
+  // following options read and use babel.config.js
+  // options: {},
 };
 
 module.exports = {
@@ -26,6 +28,8 @@ module.exports = {
           babelLoader,
           {
             loader: 'ts-loader',
+            // following options read and use tsconfig.json
+            // options: {},
           },
         ],
       },
@@ -80,4 +84,6 @@ module.exports = {
       '@': path.resolve(__dirname, '..', 'src'),
     },
   },
+
+  devtool: 'inline-source-map',
 };
