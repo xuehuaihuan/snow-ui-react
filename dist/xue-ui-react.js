@@ -13,48 +13,6 @@
     styled = styled && Object.prototype.hasOwnProperty.call(styled, 'default') ? styled['default'] : styled;
 
     /**
-     * xx-small - 极极小
-     * @constant { String } XXS
-     */
-    var XXS = 'xxs';
-    /**
-     * x-small - 极小
-     * @constant { String } XS
-     */
-    var XS = 'xs';
-    /**
-     * small - 小
-     * @constant { String } SM
-     */
-    var SM = 'sm';
-    /**
-     * medium - 中
-     * @constant { String } MD
-     */
-    var MD = 'md';
-    /**
-     * large - 大
-     * @constant { String } LG
-     */
-    var LG = 'lg';
-    /**
-     * x-large - 极大
-     * @constant { String } XL
-     */
-    var XL = 'xl';
-    /**
-     * xx-large - 极极大
-     * @constant { String } XXL
-     */
-    var XXL = 'xxl';
-
-    var defaultProps = {
-        centerMode: false,
-        fgcolor: '',
-        size: MD,
-    };
-
-    /**
      * class of - 是否为Class
      * @param  { String } className Class name in JavaScript
      * @return { Function } as follows: - 如下：
@@ -166,6 +124,42 @@
   }
 `;
 
+    /**
+     * xx-small - 极极小
+     * @constant { String } XXS
+     */
+    var XXS = 'xxs';
+    /**
+     * x-small - 极小
+     * @constant { String } XS
+     */
+    var XS = 'xs';
+    /**
+     * small - 小
+     * @constant { String } SM
+     */
+    var SM = 'sm';
+    /**
+     * medium - 中
+     * @constant { String } MD
+     */
+    var MD = 'md';
+    /**
+     * large - 大
+     * @constant { String } LG
+     */
+    var LG = 'lg';
+    /**
+     * x-large - 极大
+     * @constant { String } XL
+     */
+    var XL = 'xl';
+    /**
+     * xx-large - 极极大
+     * @constant { String } XXL
+     */
+    var XXL = 'xxl';
+
     var sizes = [XXS, XS, SM, MD, LG, XL, XXL];
     var getSize = function (size) {
         size = size && sizes.includes(size) ? size : MD;
@@ -205,7 +199,6 @@
             Component.call(this, props);
             this.now = Date.now() || (+new Date());
             this.seed = 0;
-            this.props = {};
             this.state = {
                 children: [],
             };
@@ -306,7 +299,11 @@
 
         return Ripple;
     }(React.Component));
-    Ripple.defaultProps = defaultProps;
+    Ripple.defaultProps = {
+        centerMode: false,
+        fgcolor: '',
+        size: MD,
+    };
 
     exports.Ripple = Ripple;
 
