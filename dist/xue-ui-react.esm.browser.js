@@ -7,48 +7,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 /**
- * xx-small - 极极小
- * @constant { String } XXS
- */
-const XXS = 'xxs';
-/**
- * x-small - 极小
- * @constant { String } XS
- */
-const XS = 'xs';
-/**
- * small - 小
- * @constant { String } SM
- */
-const SM = 'sm';
-/**
- * medium - 中
- * @constant { String } MD
- */
-const MD = 'md';
-/**
- * large - 大
- * @constant { String } LG
- */
-const LG = 'lg';
-/**
- * x-large - 极大
- * @constant { String } XL
- */
-const XL = 'xl';
-/**
- * xx-large - 极极大
- * @constant { String } XXL
- */
-const XXL = 'xxl';
-
-const defaultProps = {
-    centerMode: false,
-    fgcolor: '',
-    size: MD,
-};
-
-/**
  * class of - 是否为Class
  * @param  { String } className Class name in JavaScript
  * @return { Function } as follows: - 如下：
@@ -160,6 +118,42 @@ const StyledRippleItem = styled.div.attrs(() => ({
   }
 `;
 
+/**
+ * xx-small - 极极小
+ * @constant { String } XXS
+ */
+const XXS = 'xxs';
+/**
+ * x-small - 极小
+ * @constant { String } XS
+ */
+const XS = 'xs';
+/**
+ * small - 小
+ * @constant { String } SM
+ */
+const SM = 'sm';
+/**
+ * medium - 中
+ * @constant { String } MD
+ */
+const MD = 'md';
+/**
+ * large - 大
+ * @constant { String } LG
+ */
+const LG = 'lg';
+/**
+ * x-large - 极大
+ * @constant { String } XL
+ */
+const XL = 'xl';
+/**
+ * xx-large - 极极大
+ * @constant { String } XXL
+ */
+const XXL = 'xxl';
+
 const sizes = [XXS, XS, SM, MD, LG, XL, XXL];
 const getSize = (size) => {
     size = size && sizes.includes(size) ? size : MD;
@@ -196,7 +190,6 @@ class Ripple extends Component {
         super(props);
         this.now = Date.now() || (+new Date());
         this.seed = 0;
-        this.props = {};
         this.state = {
             children: [],
         };
@@ -282,6 +275,10 @@ class Ripple extends Component {
             children));
     }
 }
-Ripple.defaultProps = defaultProps;
+Ripple.defaultProps = {
+    centerMode: false,
+    fgcolor: '',
+    size: MD,
+};
 
 export { Ripple };

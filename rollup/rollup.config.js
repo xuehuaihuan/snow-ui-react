@@ -61,25 +61,15 @@ function genConfig (options) {
     input: {
       input: resolve('src/index.tsx'),
       plugins: [
-        typescript(
-          // {
-          //   jsx: 'react',
-          //   target: 'ESNext',
-          //   allowSyntheticDefaultImports: true,
-          // },
-        ),
+        typescript(),
         babel({
           presets: ['@babel/preset-react'],
-          plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime'],
+          // plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime'],
+          plugins: ['@babel/plugin-proposal-class-properties'],
           babelHelpers: 'runtime',
-          // plugins: ['@babel/plugin-proposal-class-properties'],
-          // babelHelpers: 'bundled',
         }),
         cjs(),
         nodeResolve(),
-        // replace({
-        //   __VERSION__: version
-        // }),
       ],
       external,
     },
@@ -107,10 +97,6 @@ function genConfig (options) {
         templateString: false,
         forOf: false,
       },
-      // transforms: {
-      //   dangerousTaggedTemplateString: true,
-      //   dangerousForOf: true,
-      // },
     }));
   }
 
