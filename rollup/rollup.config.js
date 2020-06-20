@@ -62,19 +62,11 @@ function genConfig (options) {
       input: resolve('src/index.tsx'),
       plugins: [
         typescript(),
-        babel({
-          presets: ['@babel/preset-env', '@babel/preset-react'],
-          plugins: [
-            [
-              '@babel/plugin-transform-runtime',
-              {
-                corejs: 3,
-              },
-            ],
-            '@babel/plugin-proposal-class-properties',
-          ],
-          babelHelpers: 'runtime',
-        }),
+        babel(
+          {
+            babelHelpers: 'runtime',
+          },
+        ),
         cjs(),
         nodeResolve(),
       ],
