@@ -1,8 +1,23 @@
-const path = require('path');
+process.env.NODE_ENV = 'development';
 
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-process.env.NODE_ENV = 'development';
+const babelLoader = {
+  loader: 'babel-loader',
+  options: {
+    presets: ['@babel/preset-env', '@babel/preset-react'],
+    plugins: [
+      [
+        '@babel/plugin-transform-runtime',
+        {
+          corejs: 3,
+        },
+      ],
+      '@babel/plugin-proposal-class-properties',
+    ],
+  },
+};
 
 module.exports = {
   mode: 'development',
@@ -20,13 +35,7 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env', '@babel/preset-react'],
-              plugins: ['@babel/plugin-proposal-class-properties'],
-            },
-          },
+          babelLoader,
           {
             loader: 'ts-loader',
           },
@@ -36,13 +45,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env', '@babel/preset-react'],
-              plugins: ['@babel/plugin-proposal-class-properties'],
-            },
-          },
+          babelLoader,
         ],
       },
     ],
@@ -84,8 +87,8 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
     alias: {
-      // 'xue-ui-react': path.join(__dirname, '..', 'dist/xue-ui-react.esm.js'),
-      'xue-ui-react': path.join(__dirname, '..', 'src/index.tsx'),
+      'xue-ui-react': path.join(__dirname, '..', 'dist/xue-ui-react.esm.js'),
+      // 'xue-ui-react': path.join(__dirname, '..', 'src/index.tsx'),
       '@': path.resolve(__dirname, '..', 'src'),
     },
   },
