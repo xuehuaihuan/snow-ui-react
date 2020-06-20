@@ -80,9 +80,10 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['.tsx', '.js'],
+    extensions: ['.tsx', '.ts', '.jsx', '.js'],
     alias: {
-      'xue-ui-react': path.join(__dirname, '..', 'dist/xue-ui-react.esm.js'),
+      // 'xue-ui-react': path.join(__dirname, '..', 'dist/xue-ui-react.esm.js'),
+      'xue-ui-react': path.join(__dirname, '..', 'src/index.tsx'),
       '@': path.resolve(__dirname, '..', 'src'),
     },
   },
