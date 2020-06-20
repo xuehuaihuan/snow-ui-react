@@ -1,18 +1,19 @@
-import React from 'react';
-import { Ripple } from '../../src';
+import React, { ReactElement } from 'react';
+import { Ripple } from 'xue-ui-react';
+
 import ExamplesHeader from '../common/header';
 import ExampleList from '../common/list';
 import {
   majorColor, minorColor, plainColor, successColor, infoColor, dangerColor, warningColor,
-} from '../../src/common/theme';
-import { StyledRippleCenterMode } from './styles/RippleCenterMode';
+} from '@/common/theme';
+import { StyledRippleFgcolor } from './styles/RippleFgcolor';
 
-const RippleFgcolor = () => {
+const RippleFgcolor = (): ReactElement => {
   return (
     <>
-      <StyledRippleCenterMode className='section-item'>
+      <StyledRippleFgcolor className='section-item'>
         <ExamplesHeader>
-          ripple center mode - 涟漪居中模式
+          ripple fgcolor - 涟漪前景色
         </ExamplesHeader>
         <ExampleList
           inline
@@ -21,9 +22,8 @@ const RippleFgcolor = () => {
             <figure>
               <Ripple
                 fgcolor={majorColor}
-                centerMode
               >
-                <div className='gradient-image cross-dots' />
+                <div className='gradient-image seigaiha' />
               </Ripple>
               <figcaption style={{
                 color: majorColor,
@@ -37,9 +37,8 @@ const RippleFgcolor = () => {
             <figure>
               <Ripple
                 fgcolor={minorColor}
-                centerMode
               >
-                <div className='gradient-image cross-dots' />
+                <div className='gradient-image seigaiha' />
               </Ripple>
               <figcaption style={{
                 color: minorColor,
@@ -53,9 +52,8 @@ const RippleFgcolor = () => {
             <figure>
               <Ripple
                 fgcolor={plainColor}
-                centerMode
               >
-                <div className='gradient-image carbon-fibre' />
+                <div className='gradient-image starry-night' />
               </Ripple>
               <figcaption style={{
                 backgroundColor: '#000',
@@ -70,9 +68,8 @@ const RippleFgcolor = () => {
             <figure>
               <Ripple
                 fgcolor={successColor}
-                centerMode
               >
-                <div className='gradient-image cross-dots' />
+                <div className='gradient-image seigaiha' />
               </Ripple>
               <figcaption style={{
                 color: successColor,
@@ -86,9 +83,8 @@ const RippleFgcolor = () => {
             <figure>
               <Ripple
                 fgcolor={infoColor}
-                centerMode
               >
-                <div className='gradient-image cross-dots' />
+                <div className='gradient-image seigaiha' />
               </Ripple>
               <figcaption style={{
                 color: infoColor,
@@ -102,9 +98,8 @@ const RippleFgcolor = () => {
             <figure>
               <Ripple
                 fgcolor={dangerColor}
-                centerMode
               >
-                <div className='gradient-image cross-dots' />
+                <div className='gradient-image seigaiha' />
               </Ripple>
               <figcaption style={{
                 color: dangerColor,
@@ -118,9 +113,8 @@ const RippleFgcolor = () => {
             <figure>
               <Ripple
                 fgcolor={warningColor}
-                centerMode
               >
-                <div className='gradient-image cross-dots' />
+                <div className='gradient-image seigaiha' />
               </Ripple>
               <figcaption style={{
                 color: warningColor,
@@ -134,9 +128,8 @@ const RippleFgcolor = () => {
             <figure>
               <Ripple
                 fgcolor='#026873'
-                centerMode
               >
-                <div className='gradient-image cross-dots' />
+                <div className='gradient-image seigaiha' />
               </Ripple>
               <figcaption style={{
                 color: '#026873',
@@ -146,8 +139,21 @@ const RippleFgcolor = () => {
               </figcaption>
             </figure>
           </ExampleList.Item>
+          <ExampleList.Item style={{
+            color: '#b71',
+          }}
+          >
+            <figure>
+              <Ripple>
+                <div className='gradient-image honey-comb' />
+              </Ripple>
+              <figcaption>
+                use inherited color
+              </figcaption>
+            </figure>
+          </ExampleList.Item>
         </ExampleList>
-      </StyledRippleCenterMode>
+      </StyledRippleFgcolor>
     </>
   );
 };

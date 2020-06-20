@@ -1,10 +1,10 @@
 const path = require('path');
-const buble = require('@rollup/plugin-buble');
-// const flow = require('rollup-plugin-flow-no-whitespace')
+const typescript = require('@rollup/plugin-typescript');
 const { babel } = require('@rollup/plugin-babel');
 const cjs = require('@rollup/plugin-commonjs');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const replace = require('@rollup/plugin-replace');
+const buble = require('@rollup/plugin-buble');
 const version = process.env.VERSION || require('../package.json').version;
 const banner =
 `/*!
@@ -42,18 +42,16 @@ module.exports = [
     file: resolve('dist/xue-ui-react.esm.browser.js'),
     format: 'es',
     env: 'development',
-    // transpile: false,
   },
   {
     file: resolve('dist/xue-ui-react.esm.browser.min.js'),
     format: 'es',
     env: 'production',
-    // transpile: false,
   },
 ].map(genConfig);
 
 function genConfig (options) {
-  const external = ['@babel/runtime', 'react', 'styled-components', 'polished', 'prop-types'];
+  const external = ['@babel/runtime', 'react', 'styled-components', 'polished'];
 
   if (options.format === 'es' || options.format === 'cjs') {
     external.shift();
@@ -61,15 +59,21 @@ function genConfig (options) {
 
   const config = {
     input: {
-      input: resolve('src/index.js'),
+      input: resolve('src/index.tsx'),
       plugins: [
-        // flow(),
+        typescript(
+          // {
+          //   jsx: 'react',
+          //   target: 'ESNext',
+          //   allowSyntheticDefaultImports: true,
+          // },
+        ),
         babel({
           presets: ['@babel/preset-react'],
-          // plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime'],
-          // babelHelpers: 'runtime',
-          plugins: ['@babel/plugin-proposal-class-properties'],
-          babelHelpers: 'bundled',
+          plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime'],
+          babelHelpers: 'runtime',
+          // plugins: ['@babel/plugin-proposal-class-properties'],
+          // babelHelpers: 'bundled',
         }),
         cjs(),
         nodeResolve(),
@@ -86,7 +90,6 @@ function genConfig (options) {
       name: 'XueUIReact',
       globals: {
         react: 'React',
-        'prop-types': 'PropTypes',
         'styled-components': 'styled',
       },
     },

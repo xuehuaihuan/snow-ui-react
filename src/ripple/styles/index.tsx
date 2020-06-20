@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+
 import {
   RIPPLE_CLASS,
   RIPPLE_LIST_CLASS, RIPPLE_ITEM_CLASS,
   RIPPLE_EFFECT, RIPPLE_EFFECT_CLASS,
 } from '../constants';
+import { RippleProps } from '../PropsType';
 
 export const StyledRipple = styled.div.attrs(() => ({
   className: RIPPLE_CLASS,
@@ -19,7 +21,7 @@ export const StyledRipple = styled.div.attrs(() => ({
     bottom: 0;
     left: 0;
     pointer-events: none;
-    ${props => props.fgcolor ? `color: ${props.fgcolor};` : ''}
+    ${(props: RippleProps) => props.fgcolor ? `color: ${props.fgcolor};` : ''}
   }
 `;
 
@@ -30,7 +32,7 @@ export const StyledRippleItem = styled.div.attrs(() => ({
   left: 0;
   top: 0;
   border-radius: 50%;
-  ${props => props.fgcolor ? `background-color: ${props.fgcolor};` : 'background-color: currentcolor;'}
+  ${(props: RippleProps) => props.fgcolor ? `background-color: ${props.fgcolor};` : 'background-color: currentcolor;'}
   opacity: 0.5;
   transform: scale(0);
   will-change: height, transform, width;

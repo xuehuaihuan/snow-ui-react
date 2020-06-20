@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import defaultProps from './defaultProps';
-import propTypes from './propTypes';
+import { RippleProps, RippleState } from './PropsType';
 import {
   getTouchEvent, getRect, getScrollLeft, getScrollTop,
   css, addClass,
@@ -8,25 +7,36 @@ import {
 import { StyledRipple, StyledRippleItem } from './styles';
 import { RIPPLE_LIST_CLASS, RIPPLE_ITEM_CLASS, RIPPLE_EFFECT_CLASS } from './constants';
 import { getSize } from './styles/size';
+import { MD } from '../common/constants';
 
-export class Ripple extends Component {
-  constructor (props) {
+export class Ripple extends Component<RippleProps, RippleState> {
+  static defaultProps: RippleProps = {
+    centerMode: false,
+    fgcolor: '',
+    size: MD,
+  };
+
+  touchEvent: any;
+  rippleNode: any;
+  now: any = Date.now() || (+new Date());
+  seed = 0;
+  setState: any;
+  state: RippleState = {
+    children: [],
+  };
+
+  constructor (props: RippleProps) {
     super(props);
     this.touchEvent = getTouchEvent();
-    this.now = Date.now() || (+new Date());
-    this.seed = 0;
-    this.state = {
-      children: [],
-    };
   }
 
-  componentDidMount () {
+  componentDidMount ():void {
     if (this.rippleNode) {
       this.rippleNode.parentNode.addEventListener(this.touchEvent.touchstart, this.handleTouchStart);
     }
   }
 
-  componentWillUnmount () {
+  componentWillUnmount (): void {
     if (this.rippleNode) {
       this.rippleNode.parentNode.removeEventListener(this.touchEvent.touchstart, this.handleTouchStart);
     }
@@ -34,7 +44,7 @@ export class Ripple extends Component {
     this.touchEvent = null;
   }
 
-  getUuid = () => {
+  getUuid = (): string => {
     return `${RIPPLE_ITEM_CLASS}-${this.now}-${this.seed++}`;
   }
 
@@ -70,9 +80,12 @@ export class Ripple extends Component {
       y = clientY - rect.top - rippleItemSize * scale / 2;
     }
 
+    const width = rippleItemSize * scale + 'px';
+    const height = rippleItemSize * scale + 'px';
+
     css(element, {
-      width: rippleItemSize * scale + 'px',
-      height: rippleItemSize * scale + 'px',
+      width: width,
+      height: height,
       top: y + 'px',
       left: x + 'px',
     });
@@ -125,9 +138,5 @@ export class Ripple extends Component {
     );
   }
 }
-
-Ripple.defaultProps = defaultProps;
-
-Ripple.propTypes = propTypes;
 
 export default Ripple;

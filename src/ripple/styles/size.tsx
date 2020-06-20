@@ -2,16 +2,11 @@ import {
   XXS, XS, SM, MD, LG, XL, XXL,
 } from '../../common/constants';
 
-/**
- * get size - 获取尺寸样式
- * @param  {Object} size
- * @return {String} as follows: - 如下：
- */
-const sizes = [XXS, XS, SM, MD, LG, XL, XXL];
-export const getSize = (size) => {
+const sizes: string[] = [XXS, XS, SM, MD, LG, XL, XXL];
+export const getSize = (size?: string): number => {
   size = size && sizes.includes(size) ? size : MD;
 
-  let scale;
+  let scale: number;
   switch (size) {
     case 'xxs':
       scale = 0.5;

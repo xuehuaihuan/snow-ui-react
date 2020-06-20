@@ -9,7 +9,7 @@ const serverConfig = {
   compress: true,
   watchContentBase: true,
   hot: true,
-  contentBase: path.resolve('./public'),
+  contentBase: path.resolve(__dirname, '../public'),
 };
 
 const port = process.env.PORT || 8080;
